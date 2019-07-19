@@ -3,9 +3,10 @@
   src:
     url("../../fonts/oswaldregular.woff2"),
     url("../../fonts/oswaldregular.woff");
-  font-weight: normal;
+  // font-weight: normal;
 }
 
+/*
 @font-face {
   font-family: "Oswald";
   src:
@@ -13,17 +14,26 @@
     url("../../fonts/oswaldmedium.woff");
   font-weight: bold;
 }
+*/
 
-.body {
-  width: 320px;
-  background: white;
-
-  font-family: "Arial", sans-serif;
-  font-weight: normal;
-  font-size: 14px;
-
+html {
   padding: 0;
   margin: 0;
 
-  outline: 5px dashed crimson;
+  .grid-gradient();
+}
+
+.body {
+  box-sizing: border-box;
+  // min-width: 320px;
+  background: lime;
+
+  padding: 0 0;
+  margin: 0;
+
+  outline: 5px dashed red;
+}
+
+.body img {
+  max-width: 100%;
 }
