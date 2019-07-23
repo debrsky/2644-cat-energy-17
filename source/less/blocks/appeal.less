@@ -1,9 +1,9 @@
 .appeal {
-  margin: 20px 20px 0;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 290px;
+
+  border: 1px dashed red;
 }
 
 .appeal__title {
@@ -26,4 +26,23 @@
   font-size: 16px;
   text-align: center;
   color: white;
+}
+
+@media (min-width: @width-tablet) {
+  .appeal {
+    display: flex;
+    align-items: center;
+
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .appeal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
 }

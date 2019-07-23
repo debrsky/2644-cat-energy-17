@@ -1,11 +1,11 @@
 .article {
-  // empty
+  outline: 1px dashed red;
 }
 
 .article__image {
   float: left;
   display: block;
-  width: 140px;
+  max-width: 140px;
 }
 
 .article__header {
@@ -16,5 +16,45 @@
   display: block;
   margin-left: 140px;
   margin-right: 20px;
+
   outline: 1px dashed red;
+}
+
+@media (min-width: @width-tablet) {
+  .article {
+    position: relative;
+    padding: 40px;
+    padding-top: 160px;
+    background-color: #f2f2f2;
+  }
+
+  .article__header {
+    text-align: center;
+  }
+
+  .article__image {
+    max-width: 324px;
+    max-height: 208px;
+
+    position: absolute;
+    bottom: calc(100% - 115px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    outline: 1px dashed red;
+  }
+
+  .article__param-list {
+    margin: 0;
+
+    outline: 1px dashed red;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .article__image {
+    max-width: 245px;
+    max-height: 172px;
+    bottom: calc(100% - 110px);
+  }
 }
