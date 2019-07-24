@@ -9,6 +9,7 @@
 .categories__list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .categories__item {
@@ -50,7 +51,8 @@
   }
 
   .categories__item {
-    flex-basis: 500px;
+    box-sizing: border-box;
+    width: 570px;
 
     &:not(:first-child) {
       margin-top: 0;
