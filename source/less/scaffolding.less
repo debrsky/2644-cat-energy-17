@@ -36,6 +36,10 @@ body {
 @media (min-width: @width-desktop) {
   body {
     width: @width-desktop;
+
+    // чтобы не появлялась горизонтальная полоса прокрутки у дестктопа из-за фона для меню,
+    // вылезающего за границы макета
+    overflow-x: hidden;
   }
 }
 
