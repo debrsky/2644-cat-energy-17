@@ -2,7 +2,12 @@
   background-color: #f2f2f2;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
+  padding: @margin-mobile;
+  padding-top: 10px;
+
+  // background-color: gold;
+  outline: 1px dashed lime;
 }
 
 .category__icon {
@@ -14,8 +19,10 @@
   padding: 10px;
   background-color: @color-accent;
   background-clip: content-box;
+  margin-left: -10px;
+  margin-top: 6px;
 
-  /* border: 1px dashed red; */
+  outline: 1px dashed red;
 }
 
 .category__icon img {
@@ -29,16 +36,31 @@
 }
 
 .category__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
   text-transform: uppercase;
-  padding-left: 0.5ch;
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+  padding-left: 0.9ch;
 }
 
 .category__text {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
   width: 100%;
+  margin-top: 1em;
   margin-bottom: 20px;
 }
 
 .category__link {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+
   flex-grow: 1;
   display: block;
   text-decoration: none;
@@ -64,23 +86,42 @@
   .category {
     display: block;
     padding: 50px;
-    padding-top: 80px;
+    padding-top: 70px;
+    padding-bottom: 60px;
   }
 
   .category__icon {
+    position: relative;
+    top: 10px;
     float: right;
     width: 200px;
     height: 200px;
     padding: 10px;
+    margin-left: 50px;
+  }
+
+  .category__icon img {
+    // empty
   }
 
   .category__title {
+    font-size: 36px;
+    font-weight: normal;
+    margin-top: 0;
+    margin-left: 3px;
     padding: 0;
   }
 
+  .category__text {
+    color: #444444;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   .category__link {
+    font-size: 20px;
     border: none;
-    margin-top: 60px;
+    margin-top: 40px;
   }
 }
 
@@ -92,10 +133,24 @@
   }
 
   .category {
-    padding: 40px 50px 60px;
+    padding: 30px 50px 60px;
   }
 
   .category__title {
-    padding-left: 3ch;
+    font-size: 36px;
+    font-weight: normal;
+    padding-left: 2.8ch;
+  }
+
+  .category__text {
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 15px;
+  }
+
+  .category__link {
+    font-size: 20px;
+    padding-top: 15px;
   }
 }

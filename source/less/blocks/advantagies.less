@@ -1,43 +1,52 @@
-@margin: 20px;
-
 .advantagies {
-  margin: @margin;
-
+  margin: @margin-mobile;
   box-sizing: border-box;
-  border: 1px dashed red;
+  overflow: auto; // чтобы не выпадали отступы внутренних элементов
+
+  // background-color: gold;
+  // outline: 1px dashed red;
 }
 
 .advantagies__title {
-  // empty
+  font-weight: normal;
+  margin: 10px 0;
 }
 
 .advantagies__list {
   list-style: none;
   padding: 0;
+  margin: 40px 0;
 }
 
 .advantagies__item {
-  min-height: 50px;
+  min-height: 60px;
+  margin: 20px 0;
   box-sizing: border-box;
-  border: 1px dashed green;
+
+  // outline: 1px dashed green;
 }
 
 .advantagies__desc {
-  margin-top: 0;
+  margin: 0;
 }
 
 .advantagies__icon {
-  display: block;
-  background-color: rgb(104, 183, 56);
+  display: flex;
+  background-color: @color-accent;
   float: left;
-  margin-right: @margin;
+  margin-right: @margin-mobile;
+  width: 60px;
+  height: 60px;
+}
+
+.advantagies__icon img {
+  display: block;
+  margin: auto;
 }
 
 @media (min-width: @width-tablet) {
-  @margin: 30px;
-
   .advantagies {
-    margin: @margin;
+    margin: @margin-tablet;
   }
 
   .advantagies__list {
@@ -52,10 +61,12 @@
     flex-direction: column;
     width: 325px;
     padding-right: 80px;
+    margin-top: 30px;
   }
 
   .advantagies__icon {
     width: 80px;
+    height: 80px;
     align-self: flex-start;
   }
 }
