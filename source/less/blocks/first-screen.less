@@ -3,46 +3,32 @@
   box-sizing: border-box;
   text-align: center;
 
-  // чтобы маргины внутренних элементов не выпадали.
-  // overflow: auto не подходит, потому что в десктопной версии обрезает фоновый блок для меню
+  // чтобы внешние отступы внутренних элементов не выпадали.
   padding-top: 5px;
 
   // background-color: pink;
   // outline: 1px dashed lime;
 
-  &::before {
-    content: "";
-    display: block;
-    top: 0;
-    height: 305px;
-    width: 320px;
-    background-image: url("../img/index-background-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    position: absolute;
-
-    // outline: 1px dashed red;
-  }
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
 }
 
 .first-screen__title {
-  position: relative; // чтобы перекрыть абсолютный блок .first-screen::before
   font-weight: 100;
   color: @color-text-inverse;
   margin: 20px;
 }
 
 .first-screen__text {
-  position: relative; // чтобы перекрыть абсолютный блок .first-screen::before
   color: @color-text-inverse;
   margin: 25px;
 }
 
 .first-screen__image {
-  position: relative; // чтобы перекрыть абсолютный блок .first-screen::before
+  // empty
 }
 
 .first-screen__link {
-  position: relative; // чтобы перекрыть абсолютный блок .first-screen::before
   box-sizing: border-box;
   display: block;
   text-align: center;
@@ -59,15 +45,13 @@
   .first-screen {
     margin: @margin-tablet;
 
-    // в макете отступ сделан картинкой, поскольку отступ картинкой не схлопнется,
-    // делаю отступ отрицательным, чтобы не менять отступ следующего блока;
+    // в макете отступ сделан картинкой.
+    // поскольку отступ картинкой не схлопнется, делаю отступ отрицательным,
+    // чтобы не менять отступ следующего блока;
     margin-bottom: -@margin-tablet;
 
+    background-image: none;
     min-height: 830px;
-
-    &::before {
-      display: none;
-    }
   }
 
   .first-screen__title {
@@ -106,21 +90,6 @@
     margin-top: 30px;
     margin-bottom: 0;
     min-height: 550px;
-    /*
-    // фоновый блок заезжает под предыдущий блок
-    &--background-for-previous-block::before {
-      display: block;
-      background-color: #68b738;
-      background-image: url("../img/index-background-desktop@1x.jpg");
-      height: 696px;
-
-      // Удаляю часть фоновой картинки, вылезающую за границы макета;
-      width: 720px - 70px;
-
-      left: 50%;
-      top: -150px;
-    }
-    */
   }
 
   .first-screen__title {
