@@ -1,5 +1,6 @@
 .main-nav {
-  // empty
+  color: #111111;
+  background-color: inherit;
 }
 
 .main-nav__list {
@@ -14,6 +15,10 @@
 
 @media (min-width: @width-desktop) {
   .main-nav {
-    //
+
+    &--invert-color {
+      // для отображения на темном фоне
+      color: white;
+    }
   }
 }

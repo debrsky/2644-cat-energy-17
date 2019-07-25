@@ -15,20 +15,19 @@
 }
 
 html {
-  background-color: black;
+  // background-color: black;
 }
 
 body {
   margin: 0;
   padding: 0;
+  background-color: white;
 }
 
 .container {
   width: @width-mobile;
   padding: 0 0;
   margin: 0 auto;
-
-  background-color: white;
 }
 
 @media (min-width: @width-tablet) {
@@ -38,9 +37,14 @@ body {
 }
 
 @media (min-width: @width-desktop) {
+  .background-accent-image {
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50vw top;
+  }
+
   .container {
     width: @width-desktop;
-
   }
 }
 
