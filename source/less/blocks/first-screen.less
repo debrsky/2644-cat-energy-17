@@ -58,7 +58,11 @@
 @media (min-width: @width-tablet) {
   .first-screen {
     margin: @margin-tablet;
-    margin-bottom: -@margin-tablet; // в макете отступ сделан картинкой, обнуляю отступ с учетом следующего блока;
+
+    // в макете отступ сделан картинкой, поскольку отступ картинкой не схлопнется,
+    // делаю отступ отрицательным, чтобы не менять отступ следующего блока;
+    margin-bottom: -@margin-tablet;
+
     min-height: 830px;
 
     &::before {
@@ -103,15 +107,17 @@
     margin-bottom: 0;
     min-height: 550px;
 
-    // фоновый блок заезжает под меню
-    &::before {
+    // фоновый блок заезжает под предыдущий блок
+    &--background-for-previous-block::before {
       display: block;
       background-color: #68b738;
       background-image: url("../img/index-background-desktop@1x.jpg");
-      background-size: cover;
       height: 696px;
-      width: 720px;
-      right: -110px;
+
+      // Удаляю часть фоновой картинки, вылезающую за границы макета;
+      width: 720px - 70px;
+
+      left: 50%;
       top: -150px;
     }
   }

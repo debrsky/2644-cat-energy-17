@@ -1,11 +1,6 @@
 .page-header {
   margin: 0 @margin-mobile;
 
-  // для фонового блока меню в десктопной версии
-  position: relative;
-  z-index: 10;
-  background-color: transparent;
-
   // background-color: gold;
   // outline: 1px dashed ;
 }
@@ -57,9 +52,15 @@
     margin-top: 50px;
     margin-bottom: 30px;
     min-height: 70px;
+
+    // чтобы перекрыть следующий блок, который создает фон для этого блока
+    position: relative;
+    z-index: 10;
+    background-color: transparent;
   }
 
   .page-header__main-nav {
+    // для отображения на фоне, выехавшем из следующего блока
     color: white;
   }
 
