@@ -1,5 +1,4 @@
 .first-screen {
-  position: relative;
   box-sizing: border-box;
   text-align: center;
 
@@ -7,7 +6,7 @@
   padding-top: 5px;
 
   // background-color: pink;
-  // outline: 1px dashed lime;
+  outline: 1px dashed lime;
 
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -16,12 +15,12 @@
 .first-screen__title {
   font-weight: 100;
   color: @color-text-inverse;
-  margin: 20px;
+  margin: 23px;
 }
 
 .first-screen__text {
   color: @color-text-inverse;
-  margin: 25px;
+  margin: 23px;
 }
 
 .first-screen__image {
@@ -43,6 +42,7 @@
 
 @media (min-width: @width-tablet) {
   .first-screen {
+    position: relative;
     margin: @margin-tablet;
 
     // в макете отступ сделан картинкой.
@@ -58,13 +58,14 @@
     color: black;
     width: 430px;
     text-align: left;
-    margin-left: 90px;
+    margin: 18px;
+    margin-left: 87px;
   }
 
   .first-screen__text {
     color: black;
     text-align: left;
-    margin-left: 90px;
+    margin-left: 88px;
     margin-top: 35px;
   }
 
@@ -73,11 +74,12 @@
     bottom: 0;
     right: 0;
     height: 609px;
+    z-index: -10;
   }
 
   .first-screen__link {
     width: 245px;
-    margin: 40px;
+    margin: 45px;
     margin-left: 90px;
   }
 }
@@ -95,7 +97,7 @@
   .first-screen__title {
     color: black;
     width: 430px;
-    margin: 70px 80px 35px;
+    margin: 57px 80px 35px;
   }
 
   .first-screen__text {
@@ -105,7 +107,7 @@
 
   .first-screen__image {
     position: absolute;
-    top: -10px;
+    top: -20px;
     right: 220px;
     height: 499px;
   }

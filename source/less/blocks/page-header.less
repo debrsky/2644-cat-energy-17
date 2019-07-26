@@ -1,12 +1,14 @@
 .page-header {
-  margin: 0 @margin-mobile;
+  margin: 0;
+  position: relative;
 
   // background-color: gold;
-  // outline: 1px dashed ;
+  outline: 1px dashed red;
 }
 
 .page-header__logo {
-  height: 65px;
+  margin-left: @margin-mobile;
+  min-height: 65px;
 }
 
 .page-header__main-nav {
@@ -24,14 +26,14 @@
   .page-header {
     margin-left: @margin-tablet;
     margin-right: @margin-tablet;
-    margin-top: 20px;
+    margin-top: @margin-tablet - 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   .page-header__logo {
-    // empty
+    margin-left: 0;
   }
 
   .page-header__nav-toggle {
@@ -45,7 +47,8 @@
 
 @media (min-width: @width-desktop) {
   .page-header {
-    margin: 50px @margin-desktop @margin-desktop;
+    margin: @margin-desktop;
+    margin-top: @margin-desktop + 10px;
     min-height: 70px;
 
     &--accent {
@@ -59,21 +62,25 @@
       display: block;
       position: absolute;
       left: 50%;
-      top: -50px;
+      top: -(@margin-desktop + 10px);
       height: 696px;
 
-      @magic-number-for-hiding-vertical-scrollbar-from-1300-to-1440: 9px;
-      width: calc(50vw - @magic-number-for-hiding-vertical-scrollbar-from-1300-to-1440);
+      // Предотвращение появления горизонтального скроллбара при ширине экрана от @width-desktop до @width-desktop + 70px
+      // * работает только при выравнивании блока по центру экрана *
+      @vertical-scrollbar-width: 17px;
+      width: calc((100vw - @vertical-scrollbar-width) / 2); /* stylelint-disable-line function-calc-no-invalid */
 
+      @background-image-width: @width-desktop / 2 + 70px; // фоновая картинка вылезает на 70px за границу макета
       background-image:
         url("../img/index-background-desktop@1x.jpg"),
-        linear-gradient(to right, @color-accent 720px, transparent 720px, transparent);
+        linear-gradient(to right, @color-accent @background-image-width, transparent @background-image-width, transparent);
       background-repeat: no-repeat;
       z-index: -10;
+
+      outline: 1px dashed black;
     }
 
     &--accent .page-header__main-nav {
-      position: relative;
       color: white;
     }
   }
