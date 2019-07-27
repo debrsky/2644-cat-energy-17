@@ -56,7 +56,7 @@
 .live-example__before-after {
   position: relative;
   left: -@margin-mobile;
-  width: calc(100% + @margin-mobile + @margin-mobile);
+  width: calc(100% + @margin-mobile + @margin-mobile); /* stylelint-disable-line function-calc-no-invalid */
   margin: 0;
   padding: 0;
   margin-top: 33px;
@@ -130,7 +130,7 @@
 
   .live-example__before-after {
     position: relative;
-    width: calc(100% + @margin-tablet + @margin-tablet);
+    width: calc(100% + @margin-tablet + @margin-tablet); /* stylelint-disable-line function-calc-no-invalid */
     flex-shrink: 0;
     margin: 0;
     padding: 0;
