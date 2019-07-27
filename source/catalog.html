@@ -12,12 +12,12 @@
 <body>
   <div class="container">
     <header class="page-header">
-      <a href="index.html" class="page-header__logo logo">
-        <img src="https://placehold.it/33x38" alt="логотип" class="logo__image">
-        <h2 class="page-header__title logo__title">Cat energy</h2>
+      <a class="page-header__logo logo">
+        <!-- TODO добавить логотип через тег img -->
+        <h1 class="logo__title visually-hidden">Cat energy</h1>
       </a>
 
-      <nav class="main-nav">
+      <nav class="page-header__main-nav main-nav">
         <button class="page-header__nav-toggle nav-toggle" type="button">Меню</button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -207,14 +207,19 @@
 
     <footer class="page-footer">
       <article class="page-footer__contacts contacts">
-        <h2 class="contacts__title section-title3">Приглашаем к сотрудничеству дилеров!</h2>
-        <address class="contacts__address section-text">ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург</address>
+        <h2 class="contacts__title">Приглашаем <br>к сотрудничеству дилеров!</h2>
+        <address class="contacts__address">
+          ул. Большая Конюшенная, д.&nbsp;19/8<br> <br>Санкт-Петербург
+        </address>
         <div class="contacts__map map">
           <img src="img/bg-map-mobile@1x.png" alt="карта" class="map__image">
+          <!--
+              <img src="img/bg-map-tablet@1x.png" alt="карта" class="map__image">
+            -->
         </div>
       </article>
       <h2 class="page-footer__title"><span class="visually-hidden">Cat Energy</span></h2>
-      <ul class="page-footer__sosial social">
+      <ul class="page-footer__social social">
         <li class="social__item social__item--vk"><a href="https://vk.com"><span
               class="visually-hidden">Вконтакте</span></a></li>
         <li class="social__item social__item--insta"><a href="https://www.instagram.com"><span
