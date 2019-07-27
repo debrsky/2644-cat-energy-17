@@ -1,7 +1,17 @@
 .map {
-  // empty
+  height: 360px;
+  position: relative;
+  background-color: #fdf7ef;
 }
 
 .map__image {
   display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+@media (min-width: @width-tablet) {
+  .map {
+    height: 396px;
+  }
 }
