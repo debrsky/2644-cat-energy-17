@@ -8,53 +8,76 @@
 }
 
 .social__item {
-  display: block;
-  width: 60px;
+  display: flex;
+  width: 55px;
   height: 60px;
-  background-repeat: no-repeat;
-  background-position: center center;
-
-  &--vk {
-    background-image: url("../img/icon-vk.svg");
-    background-size: 22px 12px;
-    background-position: 60% 50%;
-  }
-
-  &--insta {
-    background-image: url("../img/icon-insta.svg");
-    background-size: 16.1px 16px;
-  }
-
-  &--fb {
-    background-image: url("../img/icon-fb.svg");
-    background-size: 10px 19px;
-    background-position: 35% 50%;
-  }
 
   .debug(lime);
 }
+
+.social__item a {
+  text-decoration: none;
+  display: block;
+  margin: auto;
+  width: 15px;
+  height: 15px;
+
+  //background-color: gold;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.social__item--vk a {
+  width: 22px;
+  height: 12px;
+  background-image: url("../img/icon-vk.svg");
+  background-size: 22px 12px;
+}
+
+.social__item--insta a {
+  width: 16.1px;
+  height: 16px;
+  background-image: url("../img/icon-insta.svg");
+  background-size: 16.1px 16px;
+}
+
+.social__item--fb a {
+  width: 10px;
+  height: 19px;
+  background-image: url("../img/icon-fb.svg");
+  background-size: 10px 19px;
+}
+
+
+
+
+
 
 @media (min-width: @width-tablet) {
   .social {
     align-items: center;
   }
 
-  .social__item {
-    &--insta {
-      background-image: url("../img/icon-insta.svg");
-      background-size: 22px 22px;
-    }
+  .social__item--vk a {
+    width: 22px*1.3;
+    height: 12px*1.3;
+    background-image: url("../img/icon-vk.svg");
+    background-size: 22px*1.3 12px*1.3;
+  }
 
-    &--vk {
-      background-image: url("../img/icon-vk.svg");
-      background-size: 30px 30px;
-      background-position: 65% 50%;
-    }
+  .social__item--insta a {
+    width: 22px;
+    height: 22px;
+    background-image: url("../img/icon-insta.svg");
+    background-size: 22px 22px;
+  }
 
-    &--fb {
-      background-image: url("../img/icon-fb.svg");
-      background-size: 1.5*10px 1.5*19px;
-      background-position: 20% 50%;
-    }
+  .social__item--fb a {
+    position: relative;
+    left: -7px;
+    width: 10px*1.5;
+    height: 19px*1.5;
+    background-image: url("../img/icon-fb.svg");
+    background-size: 10px*1.5 19px*1.5;
   }
 }
