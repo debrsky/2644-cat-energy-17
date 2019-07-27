@@ -1,5 +1,21 @@
-@debug: 1;
+@debug: 0;
 
-.debug-outline() when (@debug = 1) {
-  outline: 1px dashed red;
+.debug(@border-color: red; @background-color: transparent) when (@debug = 1) {
+  outline: 1px dashed @border-color;
 }
+
+/* stylelint-disable */
+
+/*
+// временно, для удобства верстки
+.container {
+  margin: 0;
+}
+@media (min-width: @width-desktop) {
+  .container {
+    margin-left: 70px;
+  }
+}
+*/
+
+/* stylelint-enable */
