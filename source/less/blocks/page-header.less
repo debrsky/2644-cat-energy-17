@@ -12,7 +12,7 @@
 }
 
 .page-header__main-nav {
-  display: none; // временно
+  display: block;
 }
 
 .page-header__nav-toggle {
@@ -20,6 +20,12 @@
   top: 0;
   right: 0;
   height: 50px;
+}
+
+@media (max-width: @width-tablet - 1px) {
+  .page-header--mobile-nav-hidden .page-header__main-nav {
+    display: none;
+  }
 }
 
 @media (min-width: @width-tablet) {
@@ -41,7 +47,7 @@
   }
 
   .page-header__main-nav {
-    display: block;
+    // empty
   }
 }
 
