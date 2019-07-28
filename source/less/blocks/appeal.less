@@ -3,7 +3,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  border: 1px dashed red;
+  padding: 0;
+
+  .debug();
 }
 
 .appeal__title {
@@ -13,9 +15,7 @@
 .appeal__icon {
   display: block;
   margin: 0 auto;
-  padding: 65px 0;
-  width: 55px;
-  height: 60px;
+  padding: 63px 0;
 }
 
 .appeal__text {
@@ -24,16 +24,35 @@
   margin: 0 auto;
   font-family: "Arial", sans-serif;
   font-size: 16px;
+  line-height: 20px;
   text-align: center;
   color: white;
+
+  .debug();
 }
 
 @media (min-width: @width-tablet) {
   .appeal {
     display: flex;
+    justify-content: space-around;
     align-items: center;
 
     background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+
+  .appeal__icon {
+    margin: 0;
+    position: relative;
+    top: -5px;
+    left: -30px;
+  }
+
+  .appeal__text {
+    position: relative;
+    top: 2px;
+    left: 6px;
+    margin: 0;
+    text-align: left;
   }
 }
 
