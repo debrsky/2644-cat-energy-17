@@ -1,4 +1,4 @@
-@debug: 1;
+@debug: 0;
 
 .debug(@border-color: red; @background-color: transparent) when (@debug = 1) {
   outline: 1px dashed @border-color;
@@ -6,11 +6,13 @@
 
 /* stylelint-disable */
 
-.container {
+
+.container when (@debug = 1) {
   margin: 0;
 }
+
 @media (min-width: @width-desktop) {
-  .container {
+  .container when (@debug = 1) {
     margin-left: 70px;
   }
 }
