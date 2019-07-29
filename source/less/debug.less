@@ -1,13 +1,15 @@
-@debug: 0;
-@no-center: 0;
+@debug: 0; // 0 - отлючить режим отладки, 1 - включить режим отладки
+@no-center: 0; // 0 - выравнивание по центру, 1 -- по левому краю
+
+@preview: 1; // 0 - скрыть макет, 1 - показать макет
+@preview-opacity: 0.5;
+@preview-invert: 100%;
 
 .debug(@border-color: red; @background-color: transparent) when (@debug = 1) {
   outline: 1px dashed @border-color;
 }
 
 /* stylelint-disable */
-
-
 .container when (@no-center = 1) {
   margin: 0;
 }
@@ -17,5 +19,4 @@
     margin-left: 70px;
   }
 }
-
 /* stylelint-enable */

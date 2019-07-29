@@ -1,0 +1,57 @@
+& when (@preview = 1) {
+  html.preview  {
+    background-position-y: 0;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+
+    filter: invert(@preview-invert);
+  }
+
+  html.preview.preview--index {
+    background-image: url("../preview/cat-energy-index-mobile.png");
+  }
+
+  html.preview.preview--catalog {
+    background-image: url("../preview/cat-energy-catalog-mobile.png");
+  }
+
+  html.preview.preview--form {
+    background-image: url("../preview/cat-energy-form-mobile.png");
+  }
+
+  html when (@no-center = 1) {
+    background-position-x: 0;
+  }
+
+  @media (min-width: @width-tablet) {
+    html.preview.preview--index {
+      background-image: url("../preview/cat-energy-index-tablet.png");
+    }
+
+    html.preview.preview--catalog {
+      background-image: url("../preview/cat-energy-catalog-tablet.png");
+    }
+
+    html.preview.preview--form {
+      background-image: url("../preview/cat-energy-form-tablet.png");
+    }
+  }
+
+  @media (min-width: @width-desktop) {
+    html.preview.preview--index {
+      background-image: url("../preview/cat-energy-index-desktop.png");
+    }
+
+    html.preview.preview--catalog {
+      background-image: url("../preview/cat-energy-catalog-desktop.png");
+    }
+
+    html.preview.preview--form {
+      background-image: url("../preview/cat-energy-form-desktop.png");
+    }
+  }
+
+  html.preview body {
+   opacity: @preview-opacity;
+  }
+}
