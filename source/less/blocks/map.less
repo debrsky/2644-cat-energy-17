@@ -6,12 +6,33 @@
 
 .map__image {
   display: block;
-  position: absolute;
-  bottom: 0;
+  margin: 0 auto;
 }
 
 @media (min-width: @width-tablet) {
   .map {
     height: 396px;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .map {
+    position: absolute;
+    height: 400px;
+
+    // Предотвращение появления горизонтального скроллбара при ширине блока равной ширине вьюпорта
+    // * работает только при выравнивании блока по центру экрана *
+    @vertical-scrollbar-width: 17px;
+    width: calc(100vw - @vertical-scrollbar-width/2); /* stylelint-disable-line function-calc-no-invalid */
+
+    top: 0;
+    left: calc(@width-desktop / 2 - 50vw); /* stylelint-disable-line function-calc-no-invalid */
+    //overflow: hidden;
+
+    .debug(green);
+  }
+
+  .map__image {
+    // empty
   }
 }

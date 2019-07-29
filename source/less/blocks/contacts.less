@@ -9,6 +9,10 @@
   .debug();
 }
 
+.contacts__header {
+  display: flex;
+}
+
 .contacts__title {
   box-sizing: border-box;
   display: block;
@@ -93,5 +97,19 @@
     padding-top: 70px - @margin-tablet - 5px;
     padding-right: 70px - @margin-tablet + 2px;
     padding-left: 150px;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .contacts {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contacts__map {
+    position: relative;
+    height: 400px;
+    overflow: visible;
   }
 }
