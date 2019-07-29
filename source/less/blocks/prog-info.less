@@ -1,3 +1,56 @@
 .prog-info {
-  // empty
+  display: flex;
+  position: relative;
+  min-height: 50px;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  background-color: inherit;
+}
+
+.prog-info__data {
+  position: absolute;
+  top: calc(100% - 0.5em + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: inherit;
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+}
+
+.prog-info__value {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: normal;
+
+  margin: auto;
+  text-transform: uppercase;
+}
+
+@media (min-width: @width-tablet) {
+  .prog-info {
+    min-height: 75px;
+  }
+
+  .prog-info__value {
+    font-size: 30px;
+    line-height: 37px;
+    padding: 0;
+    padding-bottom: 2px;
+  }
+
+  .prog-info__data {
+    font-size: 14px;
+    line-height: 14px;
+    width: auto;
+    top: calc(100% - 0.5em - 1px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: inherit;
+    font-family: "Arial", sans-serif;
+    white-space: nowrap;
+    padding: 0 1ch;
+  }
 }

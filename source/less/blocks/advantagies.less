@@ -1,27 +1,138 @@
 .advantagies {
-  margin: 20px;
+  margin: @margin-mobile;
+  padding: 10px 0 5px;
+  box-sizing: border-box;
+
+  // background-color: gold;
+  .debug();
 }
 
 .advantagies__title {
-  // empty
+  font-weight: normal;
+  margin: 3px 0;
 }
 
 .advantagies__list {
   list-style: none;
   padding: 0;
+  margin: 0;
+  margin-top: 40px;
+
+  // background-color: pink;
 }
 
 .advantagies__item {
-  // empty
+  min-height: 60px;
+  margin: @margin-mobile 0;
+  box-sizing: border-box;
+
+  .debug(green);
 }
 
-.advantagies__text {
-  display: block;
+.advantagies__desc {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+
+  margin: 0;
+  padding-top: 2px;
 }
 
 .advantagies__icon {
-  display: block;
-  background-color: rgb(104, 183, 56);
+  display: flex;
+  background-color: @color-accent;
   float: left;
-  margin-right: 20px;
+  margin-right: @margin-mobile;
+  width: 60px;
+  height: 60px;
+}
+
+.advantagies__icon img {
+  display: block;
+  margin: auto;
+}
+
+@media (min-width: @width-tablet) {
+  .advantagies {
+    margin: @margin-tablet;
+  }
+
+  .advantagies__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0;
+    margin-top: 34px;
+
+    counter-reset: item;
+  }
+
+  .advantagies__item {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+    padding-right: 60px;
+    margin: 0;
+    margin-top: 36px;
+    min-height: 281px;
+  }
+
+  .advantagies__item::before {
+    position: absolute;
+    left: 118px;
+    top: -38px;
+    content: counter(item);
+    counter-increment: item;
+    display: block;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-weight: normal;
+    font-size: 281px;
+    line-height: 281px;
+    color: #f2f2f2;
+    background-color: transparent;
+  }
+
+  .advantagies__icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-top: 2px;
+    align-self: flex-start;
+  }
+
+  .advantagies__desc {
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .advantagies {
+    margin: 80px @margin-desktop 80px;
+    margin-top: -5px;
+    padding: 0;
+  }
+
+  .advantagies__title {
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: 70px;
+    padding: 0;
+  }
+
+  .advantagies__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .advantagies__item {
+    width: 245px;
+    margin: 0;
+    padding: 0;
+  }
 }

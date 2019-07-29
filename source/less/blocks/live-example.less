@@ -1,21 +1,142 @@
 .live-example {
   background-color: rgb(242, 242, 242);
-  padding: 20px;
+  margin: @margin-mobile 0;
+  padding: @margin-mobile;
+
+  min-height: 661px; // временно
+
+  .debug();
 }
 
 .live-example__title {
-  // empty
+  margin: 0;
+  margin-top: 6px;
+  padding: 0;
 }
 
 .live-example__desc {
-  // empty
-}
-
-.live-example__costs {
-  text-align: center;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+  margin-top: 36px;
+  padding-right: 1px;
 }
 
 .live-example__list {
   list-style: none;
+  margin: 0;
+  margin-top: 25px;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: inherit;
+
+  .debug();
+}
+
+.live-example__item {
+  box-sizing: border-box;
+  width: 124px;
+  padding: 0;
+}
+
+.live-example__costs {
+  margin: 0;
+  margin-top: 39px;
+  padding: 0;
+  text-align: center;
+}
+
+.live-example__costs br {
+  display: none;
+}
+
+.live-example__before-after {
+  position: relative;
+  left: -@margin-mobile;
+  width: calc(100% + @margin-mobile + @margin-mobile); /* stylelint-disable-line function-calc-no-invalid */
+  margin: 0;
+  padding: 0;
+  margin-top: 33px;
+
+  .debug();
+}
+
+@media (min-width: @width-tablet) {
+  .live-example {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin: @margin-tablet;
+    padding: 0;
+    background-color: white;
+
+    min-height: 1053px; // временно
+
+    // background-color: pink;
+  }
+
+  .live-example__item {
+    width: 162px;
+  }
+
+  .live-example__item:not(:last-child) {
+    margin-right: 42px;
+  }
+
+  .live-example__title {
+    margin: 0;
+    padding: 0;
+    margin-top: 16px;
+    width: 100%;
+
+    // background: gold;
+  }
+
+  .live-example__desc {
+    width: calc(100% - 6px);
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+    margin-top: 65px;
+    margin-bottom: 50px;
+  }
+
+  .live-example__list {
+    margin: 0;
+    justify-content: flex-start;
+    flex-grow: 1;
+    align-items: baseline;
+  }
+
+  .live-example__costs {
+    margin: 0;
+    margin-top: 8px;
+    padding: 0;
+    text-align: right;
+  }
+
+  .live-example__costs::first-line {
+    // TODO сделать висячее двоеточие в конце строки
+  }
+
+  .live-example__costs br {
+    display: inline;
+  }
+
+  .live-example__before-after {
+    position: relative;
+    width: calc(100% + @margin-tablet + @margin-tablet); /* stylelint-disable-line function-calc-no-invalid */
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    margin-top: 85px;
+    left: -@margin-tablet;
+
+    .debug();
+  }
 }
