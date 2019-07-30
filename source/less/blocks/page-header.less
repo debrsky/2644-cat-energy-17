@@ -1,4 +1,6 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   position: relative;
 
@@ -30,11 +32,11 @@
 
 @media (min-width: @width-tablet) {
   .page-header {
+    flex-direction: row;
     margin-left: @margin-tablet;
     margin-right: @margin-tablet;
 
     padding-top: @margin-tablet - 10px;
-    display: flex;
     align-items: center;
   }
 
