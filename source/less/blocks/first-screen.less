@@ -1,79 +1,97 @@
 .first-screen {
   box-sizing: border-box;
-  text-align: center;
-
-  // чтобы внешние отступы внутренних элементов не выпадали.
-  padding-top: 5px;
+  padding: 0;
+  padding-top: 27px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-position: 0 1px;
+  background-size: contain;
 
   // background-color: pink;
   .debug(lime);
 }
 
 .first-screen__title {
-  font-weight: 100;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+
   color: @color-text-inverse;
-  margin: 23px;
+
+  .debug();
 }
 
 .first-screen__text {
+  margin: 0;
+  margin-top: 23px;
+  padding: 0;
+  text-align: center;
+
   color: @color-text-inverse;
-  margin: 23px;
+
+  .debug();
 }
 
 .first-screen__image {
-  // empty
+  display: block;
+  margin: 0;
+  margin-top: 24px;
+  padding: 0;
 }
 
 .first-screen__link {
-  box-sizing: border-box;
-  display: block;
+  align-self: stretch;
+  margin: 0;
+  margin-left: @margin-mobile;
+  margin-right: @margin-mobile;
+  margin-top: 3px; // по макету вплотную к картинке
+  margin-bottom: @margin-mobile;
+  padding: 9px;
+  padding-bottom: 10px;
+
   text-align: center;
   text-decoration: none;
   color: @color-text-inverse;
   background-color: @color-accent;
-  padding: 10px;
-  margin: @margin-mobile;
-  margin-top: -2px; // по макету вплотную к картинке
-  margin-bottom: @margin-mobile;
 }
 
+/* ***************************************************************************** */
 @media (min-width: @width-tablet) {
   .first-screen {
+    align-items: flex-start;
     position: relative;
     margin: @margin-tablet;
+    margin-bottom: 0;
 
-    // в макете отступ сделан картинкой.
-    // поскольку отступ картинкой не схлопнется, делаю отступ отрицательным,
-    // чтобы не менять отступ следующего блока;
-    margin-bottom: -@margin-tablet;
+    padding: 0;
+    padding-top: 22px;
+    padding-left: 90px - 2px;
 
     background-image: none;
 
-    // Оказывается, если поставить высоту блока через min-height, а не через height, то
-    // внешний отступ последнего блока в потоке (.first-screen__link) начинает выпадать из родительского блока,
-    // как будто высота вообще не указана, несмотря на то, что до нижней границы родительского блока еще очень
-    // много места (!). И это не баг, это происходит во всех браузерах.
-    // P.S. Добавил снизу внутренний отступ и вернул min-height;
-    padding-bottom: 5px;
     min-height: 835px;
   }
 
   .first-screen__title {
+    margin: 0;
+
     color: black;
     width: 430px;
     text-align: left;
-    margin: 18px;
-    margin-left: 87px;
   }
 
   .first-screen__text {
+    margin: 0;
+    margin-top: 36px;
     color: black;
+    width: 430px;
     text-align: left;
-    margin: 35px;
-    margin-left: 88px;
   }
 
   .first-screen__image {
@@ -85,42 +103,65 @@
   }
 
   .first-screen__link {
+    box-sizing: border-box;
     width: 245px;
-    margin: 45px;
-    margin-left: 90px;
+
+    text-align: left;
+
+    margin: 0;
+    margin-top: 43px;
+    margin-left: 1px;
+
+    padding: 10px;
+    padding-left: 25px;
+    padding-bottom: 12px;
   }
 }
 
+/* ************************************************************************* */
 @media (min-width: @width-desktop) {
   .first-screen {
-    box-sizing: border-box;
     position: relative;
+
     margin: @margin-desktop;
-    margin-top: 30px;
     margin-bottom: 0;
-    min-height: 696px - 160px;
+
+    padding: 0;
+    padding-left: 80px;
+    padding-top: 20px;
+
+    min-height: 696px - 2*@margin-desktop - 70px - @margin-desktop - 10px;
   }
 
   .first-screen__title {
+    margin: 0;
+    margin-top: 2px;
+    padding: 0;
+
     color: black;
+    box-sizing: border-box;
     width: 430px;
-    margin: 57px 80px 35px;
   }
 
   .first-screen__text {
+    margin: 0;
+    margin-top: 36px;
+
     color: black;
-    margin: 35px 80px 35px;
   }
 
   .first-screen__image {
     position: absolute;
-    top: -20px;
+    top: -84px;
     right: 220px;
     height: 499px;
   }
 
   .first-screen__link {
-    margin: 50px 80px 50px;
+    margin: 0;
+    margin-top: 48px;
+
+    box-sizing: border-box;
     width: 245px;
   }
 }
