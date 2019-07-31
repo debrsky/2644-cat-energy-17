@@ -130,14 +130,16 @@
         <div class="live-example__costs section-title3">Затраты на питание: <br>15&thinsp;000 руб.</div>
 
         <div class="live-example__before-after before-after">
-          <!--
-            <img src="img/before-tablet@1x.png" alt="Толстый кот сидит"
-            class="before-after__image before-after__image--before">
-          -->
-          <img src="img/before-mobile@1x.png" alt="Толстый кот сидит"
-            class="before-after__image before-after__image--before">
-          <img src="img/after-mobile@1x.png" alt="Худой кот сидит"
-            class="before-after__image before-after__image--after">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+            <img src="img/before-mobile@1x.png" alt="Толстый кот сидит" class="before-after__image before-after__image--before">
+          </picture>
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+            <img src="img/after-mobile@1x.png" alt="Худой кот сидит" class="before-after__image before-after__image--after">
+          </picture>
           <button class="before-after__btn before-after__btn--before">Было</button>
           <div class="before-after__diagram"></div>
           <button class="before-after__btn before-after__btn--after">Стaло</button>
