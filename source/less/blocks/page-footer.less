@@ -1,24 +1,16 @@
 .page-footer {
+  display: flex;
+  flex-direction: column;
+
   margin: 0;
   padding: 0;
+
+  background-color: #f2f2f2;
 }
 
 .page-footer__contacts {
   margin: 0;
   flex-basis: 100%;
-}
-
-.page-footer__bottom-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-
-  margin: 0;
-  padding: 0;
-
-  background-color: rgb(242, 242, 242);
-
 }
 
 .page-footer__logo {
@@ -63,7 +55,7 @@
 
 /* ***************************************************************** */
 @media (min-width: @width-tablet) {
-  .page-footer__bottom-container {
+  .page-footer {
     flex-direction: row;
 
     box-sizing: border-box;
@@ -88,11 +80,11 @@
 
 /* *********************************************************************** */
 @media (min-width: @width-desktop) {
-  .page-footer__bottom-container {
+  .page-footer {
     position: relative;
   }
 
-  .page-footer__bottom-container::before {
+  .page-footer::before {
     content: "";
     display: block;
     position: absolute;

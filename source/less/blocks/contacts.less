@@ -1,12 +1,13 @@
 .contacts {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  background-color: white;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  margin: 0;
   padding: 0;
 
-  box-sizing: border-box;
-  // width: 100%;
+  background-color: #f2f2f2;
 
   .debug();
 }
@@ -22,14 +23,6 @@
 
   &--index {
     background-color: white;
-  }
-
-  &--catalog {
-    background-color: #f2f2f2;
-  }
-
-  &--form {
-    background-color: #f2f2f2;
   }
 
   .debug();
@@ -76,6 +69,7 @@
   width: 100%;
 
   // overflow: hidden; // временно
+  // visibility: hidden;
 
   // background: lime;
   .debug(green);
@@ -157,6 +151,8 @@
     z-index: 10;
 
     justify-content: space-between;
+
+    background-color: white;
   }
 
   .contacts__title {
