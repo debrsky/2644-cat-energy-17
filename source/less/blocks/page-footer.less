@@ -21,6 +21,8 @@
   background-repeat: no-repeat;
   background-position: 50% 55%;
   background-size: 127.8px 23.4px;
+
+  box-sizing: border-box;
   height: 95px;
 
   margin: 0 @margin-mobile;
@@ -38,10 +40,23 @@
 }
 
 .page-footer__copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+
   margin: 0 @margin-mobile;
+  padding: 0;
+  padding-top: @margin-mobile;
+  padding-bottom: @margin-mobile;
+
   flex-basis: 100%;
+
+  .debug();
 }
 
+/* ***************************************************************** */
 @media (min-width: @width-tablet) {
   .page-footer__title {
     margin: 0;
@@ -62,12 +77,14 @@
 
   .page-footer__copyright {
     margin: 0;
-    margin-right: @margin-tablet;
     flex-basis: (@width-tablet - 2*@margin-tablet) / 3;
     flex-grow: 1;
+
+    align-items: flex-end;
   }
 }
 
+/* *********************************************************************** */
 @media (min-width: @width-desktop) {
   .page-footer__bottom-container {
     position: relative;
