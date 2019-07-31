@@ -1,16 +1,19 @@
 .live-example {
   background-color: rgb(242, 242, 242);
-  margin: @margin-mobile 0;
+  margin: 0;
+  margin-top: @margin-mobile + 2px;
   padding: @margin-mobile;
 
-  min-height: 661px; // временно
+  box-sizing: border-box;
+  min-height: 705px; // временно
 
+  // background-color: gold;
   .debug();
 }
 
 .live-example__title {
   margin: 0;
-  margin-top: 6px;
+  margin-top: 9px;
   padding: 0;
 }
 
@@ -64,19 +67,26 @@
   .debug();
 }
 
+/* ****************************************************************************** */
 @media (min-width: @width-tablet) {
   .live-example {
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    margin: @margin-tablet;
-    margin-bottom: 0;
+
+    margin: 0;
     padding: 0;
+    padding-top: 27px;
+    padding-left: @margin-tablet;
+    padding-right: @margin-tablet;
+    padding-bottom: 0;
+
     background-color: white;
 
-    min-height: 1053px; // временно
+    box-sizing: border-box;
+    min-height: 1080px; // временно
 
-    // background-color: pink;
+    border-top: 1px solid #e6e6e6;
   }
 
   .live-example__item {
@@ -139,5 +149,26 @@
     left: -@margin-tablet;
 
     .debug();
+  }
+}
+
+/* ****************************************************************************** */
+@media (min-width: @width-desktop) {
+  .live-example {
+    flex-grow: 0;
+
+    box-sizing: border-box;
+    min-height: auto;
+    height: 630px;
+
+    // временно
+    visibility: hidden;
+
+    // временно
+    overflow: hidden;
+
+    border: none;
+
+    background-color: gold;
   }
 }
