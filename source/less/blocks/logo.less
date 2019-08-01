@@ -1,5 +1,10 @@
 .logo {
-  // empty
+  box-sizing: border-box;
+  display: block;
+  background-image: url("../img/logo-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 190px 38px;
+  background-position: left center;
 }
 
 .logo__title {
@@ -8,12 +13,17 @@
 
 @media (min-width: @width-tablet) {
   .logo {
-    // empty
+    min-width: 172.3px;
+    background-image: url("../img/logo-tablet.svg");
+    background-size: 172.3px 57.1px;
   }
 }
 
 @media (min-width: @width-desktop) {
   .logo {
-    // empty
+    min-width: 202px;
+    height: 59.5px;
+    background-image: url("../img/logo-desktop.svg");
+    background-size: 202px 59.5px;
   }
 }
