@@ -1,4 +1,6 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   position: relative;
 
@@ -30,10 +32,11 @@
 
 @media (min-width: @width-tablet) {
   .page-header {
+    flex-direction: row;
     margin-left: @margin-tablet;
     margin-right: @margin-tablet;
-    margin-top: @margin-tablet - 10px;
-    display: flex;
+
+    padding-top: @margin-tablet - 10px;
     align-items: center;
   }
 
@@ -54,7 +57,10 @@
 @media (min-width: @width-desktop) {
   .page-header {
     margin: @margin-desktop;
-    margin-top: @margin-desktop + 10px;
+    margin-top: 0;
+
+    padding-top: @margin-desktop + 10px;
+
     min-height: 70px;
 
     &--accent {
@@ -68,7 +74,7 @@
       display: block;
       position: absolute;
       left: 50%;
-      top: -(@margin-desktop + 10px);
+      top: 0;
       height: 696px;
 
       // Предотвращение появления горизонтального скроллбара
@@ -92,10 +98,10 @@
   }
 
   .page-header__main-nav {
-    // empty
+    .debug();
   }
 
   .page-header__logo {
-    // empty
+    .debug();
   }
 }

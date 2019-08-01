@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="preview preview--catalog">
 
 <head>
   <meta charset="utf-8">
@@ -43,7 +43,11 @@
 
           <li class="catalog__item article">
             <a href="#" class="catalog__info-link">
-              <img src="img/chicken-small-tablet@1x.png" alt="упаковка еды малая оранжевая" class="article__image">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png">
+                <img class="article__image" src="img/chicken-small-mobile@1x.jpg" alt="курица, упаковка малая оранжевая">
+              </picture>
               <h3 class="article__header">Cat Energy<br> Pro 500 г</h3>
             </a>
             <dl class="article__param-list">
@@ -59,7 +63,11 @@
 
           <li class="catalog__item article">
             <a href="#" class="catalog__info-link">
-              <img src="img/chicken-big-desktop@1x.png" alt="упаковка еды большая оранжевая" class="article__image">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png">
+                <img src="img/chicken-big-mobile@1x.jpg" alt="курица, упаковка большая оранжевая" class="article__image">
+              </picture>
               <h3 class="article__header">Cat Energy<br> Pro 1000 г</h3>
             </a>
             <dl class="article__param-list">
@@ -75,7 +83,11 @@
 
           <li class="catalog__item article">
             <a href="#" class="catalog__info-link">
-              <img src="img/fish-small-mobile@1x.jpg" alt="упаковка еды малая зеленая" class="article__image">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.png">
+                <source media="(min-width: 769px)" srcset="img/fish-small-tablet@1x.png">
+                <img src="img/fish-small-mobile@1x.jpg" alt="рыба, упаковка малая зеленая" class="article__image">
+              </picture>
               <h3 class="article__header">Cat Energy<br> Pro 500 г</h3>
             </a>
             <dl class="article__param-list">
@@ -91,7 +103,11 @@
 
           <li class="catalog__item article">
             <a href="#" class="catalog__info-link">
-              <img src="img/fish-big-mobile@1x.jpg" alt="упаковка еды большая зеленая" class="article__image">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png">
+                <img src="img/fish-big-mobile@1x.jpg" alt="рыба, упаковка большая зеленая" class="article__image">
+              </picture>
               <h3 class="article__header">Cat Energy<br> Pro 1000 г</h3>
             </a>
             <dl class="article__param-list">
@@ -107,7 +123,11 @@
 
           <li class="catalog__item article">
             <a href="#" class="catalog__info-link">
-              <img src="img/buckwheat-small-mobile@1x.jpg" alt="упаковка еды малая синяя" class="article__image">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png">
+                <img src="img/buckwheat-small-mobile@1x.jpg" alt="гречка, упаковка малая синяя" class="article__image">
+              </picture>
               <h3 class="article__header">Cat Energy<br> Slim 500 г</h3>
             </a>
             <dl class="article__param-list">
@@ -123,7 +143,11 @@
 
           <li class="catalog__item article">
             <a href="#" class="catalog__info-link">
-              <img src="img/buckwheat-big-mobile@1x.jpg" alt="упаковка еды большая синяя" class="article__image">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png">
+                <img src="img/buckwheat-big-mobile@1x.jpg" alt="гречка, упаковка большая синяя" class="article__image">
+              </picture>
               <h3 class="article__header">Cat Energy<br> Slim 1000 г</h3>
             </a>
             <dl class="article__param-list">
@@ -139,7 +163,11 @@
 
           <li class="catalog__item article">
             <a href="#" class="catalog__info-link">
-              <img src="img/rice-small-mobile@1x.jpg" alt="упаковка еды малая фиолетовая" class="article__image">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png">
+                <img src="img/rice-small-mobile@1x.jpg" alt="рис, упаковка малая фиолетовая" class="article__image">
+              </picture>
               <h3 class="article__header">Cat Energy<br> Slim 500 г</h3>
             </a>
             <dl class="article__param-list">
@@ -195,49 +223,55 @@
           </li>
         </ul>
 
-        <article class="catalog-extra__appeal appeal">
-          <h3 class="appeal__title visually-hidden">Подарок</h3>
-          <img class="appeal__icon" src="img/icon-gift.svg" alt="подарок в упаковке" width="55.5" heigth="60">
-          <p class="appeal__text">
+        <article class="catalog-extra__gift gift">
+          <h3 class="gift__title visually-hidden">Подарок</h3>
+          <img class="gift__icon" src="img/icon-gift.svg" alt="подарок в упаковке" width="55.5" heigth="60">
+          <p class="gift__text">
             Закажите все<br> и получите чехол для кота в подарок!
           </p>
         </article>
       </section>
     </main>
 
-    <footer class="page-footer">
-      <article class="page-footer__contacts contacts">
-        <header class="contacts__header">
-          <h2 class="contacts__title">Приглашаем <br>к сотрудничеству дилеров!</h2>
-          <address class="contacts__address">
-            ул. Большая Конюшенная, д.&nbsp;19/8<br> <br>Санкт-Петербург
-          </address>
-        </header>
-        <div class="contacts__map">
-          <div class="map">
-              <img src="img/bg-map-mobile@1x.png" alt="карта" class="map__image">
-              <!--
-                <img src="img/bg-map-tablet@1x.png" alt="карта" class="map__image">
-              -->
-          </div>
+    <article class="contacts">
+      <header class="contacts__header">
+        <h2 class="contacts__title">Приглашаем <br>к сотрудничеству дилеров!</h2>
+        <address class="contacts__address">
+          ул. Большая Конюшенная, д.&nbsp;19/8<br> <br>Санкт-Петербург
+        </address>
+      </header>
+      <div class="contacts__map">
+        <div class="map">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
+            <img src="img/bg-map-mobile@1x.png" alt="карта" class="map__image" width="320" height="400">
+          </picture>
         </div>
-      </article>
-      <section class="page-footer__bottom-container">
-        <h2 class="page-footer__title"><span class="visually-hidden">Cat Energy</span></h2>
-        <ul class="page-footer__social social">
-          <li class="social__item social__item--vk"><a href="https://vk.com"><span
-                class="visually-hidden">Вконтакте</span></a></li>
-          <li class="social__item social__item--insta"><a href="https://www.instagram.com"><span
-                class="visually-hidden">Инстаграмм</span></a></li>
-          <li class="social__item social__item--fb"><a href="https://www.facebook.com"><span
-                class="visually-hidden">Фэйсбук</span></a></li>
-        </ul>
-        <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
-          <div class="copyright__text">HTML Academy</div>
-          <div class="copyright__logo"></div>
+      </div>
+    </article>
+
+    <footer class="page-footer">
+      <div class="page-footer__logo">
+        <a class="logo-footer" href="index.html">
+          <h2 class="visually-hidden">Cat Energy</h2>
         </a>
-      </section>
+      </div>
+      <ul class="page-footer__social social">
+        <li class="social__item social__item--vk"><a href="https://vk.com"><span
+              class="visually-hidden">Вконтакте</span></a></li>
+        <li class="social__item social__item--insta"><a href="https://www.instagram.com"><span
+              class="visually-hidden">Инстаграмм</span></a></li>
+        <li class="social__item social__item--fb"><a href="https://www.facebook.com"><span
+              class="visually-hidden">Фэйсбук</span></a></li>
+      </ul>
+      <div class="page-footer__copyright">
+        <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          HTML Academy
+        </a>
+      </div>
     </footer>
+
   </div>
 </body>
 

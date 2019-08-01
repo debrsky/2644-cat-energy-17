@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="preview preview--index">
 
 <head>
   <meta charset="utf-8">
@@ -37,7 +37,11 @@
       <section class="first-screen">
         <h2 class="first-screen__title section-title">Функциональное питание для котов</h2>
         <p class="first-screen__text section-title3">Занялся собой? Займись котом!</p>
-        <img src="img/index-can-mobile@1x.png" alt="Упаковка питания" class="first-screen__image">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
+          <img src="img/index-can-mobile@1x.png" alt="Упаковка питания" class="first-screen__image">
+        </picture>
         <a href="form.html" class="first-screen__link section-title3">Подобрать программу</a>
       </section>
 
@@ -126,14 +130,16 @@
         <div class="live-example__costs section-title3">Затраты на питание: <br>15&thinsp;000 руб.</div>
 
         <div class="live-example__before-after before-after">
-          <!--
-            <img src="img/before-tablet@1x.png" alt="Толстый кот сидит"
-            class="before-after__image before-after__image--before">
-          -->
-          <img src="img/before-mobile@1x.png" alt="Толстый кот сидит"
-            class="before-after__image before-after__image--before">
-          <img src="img/after-mobile@1x.png" alt="Худой кот сидит"
-            class="before-after__image before-after__image--after">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+            <img src="img/before-mobile@1x.png" alt="Толстый кот сидит" class="before-after__image before-after__image--before">
+          </picture>
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+            <img src="img/after-mobile@1x.png" alt="Худой кот сидит" class="before-after__image before-after__image--after">
+          </picture>
           <button class="before-after__btn before-after__btn--before">Было</button>
           <div class="before-after__diagram"></div>
           <button class="before-after__btn before-after__btn--after">Стaло</button>
@@ -141,38 +147,43 @@
       </section>
     </main>
 
-    <footer class="page-footer">
-      <article class="page-footer__contacts contacts">
-        <header class="contacts__header">
-          <h2 class="contacts__title">Приглашаем <br>к сотрудничеству дилеров!</h2>
-          <address class="contacts__address">
-            ул. Большая Конюшенная, д.&nbsp;19/8<br> <br>Санкт-Петербург
-          </address>
-        </header>
-        <div class="contacts__map">
-          <div class="map">
-              <img src="img/bg-map-mobile@1x.png" alt="карта" class="map__image">
-              <!--
-                <img src="img/bg-map-tablet@1x.png" alt="карта" class="map__image">
-              -->
-          </div>
+    <article class="contacts">
+      <header class="contacts__header contacts__header--index">
+        <h2 class="contacts__title">Приглашаем <br>к сотрудничеству дилеров!</h2>
+        <address class="contacts__address">
+          ул. Большая Конюшенная, д.&nbsp;19/8<br> <br>Санкт-Петербург
+        </address>
+      </header>
+      <div class="contacts__map">
+        <div class="map">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
+            <img src="img/bg-map-mobile@1x.png" alt="карта" class="map__image" width="320" height="400">
+          </picture>
         </div>
-      </article>
-      <section class="page-footer__bottom-container">
-        <h2 class="page-footer__title"><span class="visually-hidden">Cat Energy</span></h2>
-        <ul class="page-footer__social social">
-          <li class="social__item social__item--vk"><a href="https://vk.com"><span
-                class="visually-hidden">Вконтакте</span></a></li>
-          <li class="social__item social__item--insta"><a href="https://www.instagram.com"><span
-                class="visually-hidden">Инстаграмм</span></a></li>
-          <li class="social__item social__item--fb"><a href="https://www.facebook.com"><span
-                class="visually-hidden">Фэйсбук</span></a></li>
-        </ul>
-        <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
-          <div class="copyright__text">HTML Academy</div>
-          <div class="copyright__logo"></div>
+      </div>
+    </article>
+
+    <footer class="page-footer">
+      <div class="page-footer__logo">
+        <a class="logo-footer">
+          <h2 class="visually-hidden">Cat Energy</h2>
         </a>
-      </section>
+      </div>
+      <ul class="page-footer__social social">
+        <li class="social__item social__item--vk"><a href="https://vk.com"><span
+              class="visually-hidden">Вконтакте</span></a></li>
+        <li class="social__item social__item--insta"><a href="https://www.instagram.com"><span
+              class="visually-hidden">Инстаграмм</span></a></li>
+        <li class="social__item social__item--fb"><a href="https://www.facebook.com"><span
+              class="visually-hidden">Фэйсбук</span></a></li>
+      </ul>
+      <div class="page-footer__copyright">
+        <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          HTML Academy
+        </a>
+      </div>
     </footer>
   </div>
 </body>
