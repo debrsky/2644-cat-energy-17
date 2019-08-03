@@ -12,10 +12,17 @@
 <body>
   <div class="container">
     <header class="page-header">
-      <a class="page-header__logo logo">
-        <!-- TODO добавить логотип через тег img -->
-        <h1 class="logo__title visually-hidden">Cat energy</h1>
-      </a>
+      <div class="page-header__logo">
+        <a class="logo">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Cat energy">
+            <!-- размеры картинок logo-*.svg указаны в атрибутах width и height самих файлов;
+                 через атрибуты srcset и sizes размеры не работают по непонятной причине -->
+          </picture>
+        </a>
+      </div>
 
       <nav class="page-header__main-nav main-nav">
         <button class="page-header__nav-toggle nav-toggle" type="button">Меню</button>
@@ -59,11 +66,11 @@
               </tr>
               <tr>
                 <td class="article__data">Вкус</td>
-                  <td class=" article__value">Курица</td>
+                <td class=" article__value">Курица</td>
               </tr>
               <tr>
                 <td class="article__data">Цена</td>
-                    <td class=" article__value">700 Р</td>
+                <td class=" article__value">700 Р</td>
               </tr>
             </table>
 
