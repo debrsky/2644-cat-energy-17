@@ -47,49 +47,55 @@
         <h2 class="form__title section-title">Подбор программы</h2>
         <p class="form__text">Заполните анкету и мы подберем<br> программу питания для вашего кота</p>
 
-        <section class="form__fieldset">
-          <h3 class="form legend section-title2 visually-hidden">Основные сведения</h3>
+        <section class="form__fieldset form__fieldset--base-info">
+          <h3 class="visually-hidden">Основные сведения</h3>
 
           <div class="form__row form__row--main-info">
             <div class="form__row-item">
 
-              <div class="form__group">
-                <label for="catname">Имя:*</label>
-                <input class="input-name" type="text" name="catname" id="catname" value="БАРСИК" required>
+              <div class="form__group textbox">
+                <label>
+                  <span class="textbox__label">Имя:*</span>
+                  <input class="textbox__input" type="text" name="catname" value="БАРСИК" required>
+                </label>
               </div>
 
-              <div class="form__group">
-                <label for="catweight">Вес (кг):*&nbsp;</label>
-                <input class="input-weight" type="text" name="catweight" id="catweight" value="7" required>
+              <div class="form__group textbox">
+                <label>
+                  <span class="textbox__label">Вес (кг):*&nbsp;</span>
+                  <input class="textbox__input" type="text" name="catweight" value="7" required>
+                </label>
               </div>
 
-              <div class="form__group">
-                <label for="catage">Возраст (лет):</label>
-                <input class="input-age" type="text" name="catage" value="7" id="catage">
+              <div class="form__group textbox">
+                <label>
+                  <span class="textbox__label">Возраст (лет):</span>
+                  <input class="textbox__input" type="text" name="catage" value="7">
+                </label>
               </div>
             </div>
 
             <div class="form__row-item">
               <div class="form__radio-group">
 
-                <div class="form__radio-area">
-                  <label for="slim">
-                    <input type="radio" name="goal" value="slim" id="slim">
-                    <span>Похудение</span>
+                <div class="form__radio-area radio">
+                  <label>
+                    <input class="radio__input" type="radio" name="goal" value="slim">
+                    <span class="radio__label">Похудение</span>
                   </label>
                 </div>
 
-                <div class="form__radio-area">
-                  <label for="fat">
-                    <input type="radio" name="goal" value="fat" id="fat">
-                    <span>Набор массы<span>
+                <div class="form__radio-area radio">
+                  <label>
+                    <input class="radio__input" type="radio" name="goal" value="fat">
+                    <span class="radio__label">Набор массы<span>
                   </label>
                 </div>
 
-                <div class="form__radio-area">
-                  <label for="needadvice">
-                    <input type="radio" name="goal" value="needadvice" id="needadvice">
-                    <span>Не знаю (нужен ваш совет)</span>
+                <div class="form__radio-area radio">
+                  <label>
+                    <input class="radio__input" type="radio" name="goal" value="needadvice" checked>
+                    <span class="radio__label">Не знаю (нужен ваш совет)</span>
                   </label>
                 </div>
               </div>
@@ -99,22 +105,26 @@
 
         </section>
 
-        <section class="form__fieldset">
-          <h3 class="form__legend section-title2">Контактные данные (владельца кота)</h3>
+        <section class="form__fieldset form__fieldset--contacts">
+          <h3 class="form__legend">Контактные данные (владельца кота)</h3>
 
           <div class="form__row form__row--contacts">
 
             <div class="form__row-item">
-              <div class="form__group">
-                <label for="email">e-mail:*</label>
-                <input class="input-email" type="email" name="email" value="KUKLACHEV@GMAIL.COM" id="email" required>
+              <div class="form__group textbox">
+                <label>
+                  <span class="textbox__label">e-mail:*</span>
+                  <input class="textbox__input textbox__input--email" type="email" name="email" value="KUKLACHEV@GMAIL.COM" required>
+                </label>
               </div>
             </div>
 
             <div class="form__row-item">
-              <div class="form__group">
-                <label for="tel">Телефон:*</label>
-                <input class="input-tel" type="tel" name="tel" value="8(960)900-60-90" id="tel" required>
+              <div class="form__group textbox">
+                <label>
+                  <span class="textbox__label">Телефон:*</span>
+                  <input class="textbox__input textbox__input--tel" type="tel" name="tel" value="8(960)900-60-90" required>
+                </label>
               </div>
             </div>
 
@@ -122,57 +132,71 @@
         </section>
 
         <section class="form__fieldset form__fieldset--comment">
-          <h3 class="form__legend section-title2">Комментарий</h3>
-          <div class="form__group">
-            <textarea class="textarea" name="about" id="about"
-              placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
+          <h3 class="form__legend">Комментарий</h3>
+
+          <div class="form__row form__row--comment">
+            <div class="form__row-item">
+              <div class="form__group textarea">
+                <label>
+                  <span class="textarea__label"></span>
+                  <textarea class="textarea__self" name="about" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
+                </label>
+              </div>
+            </div>
           </div>
         </section>
 
-        <section class="form__fieldset">
-          <h3 class="form__legend section-title2">Дополнительно</h3>
+        <section class="form__fieldset form__fieldset--extra">
+          <h3 class="form__legend">Дополнительно</h3>
 
           <div class="form__row form__row--extra">
 
             <div class="form__row-item form__checkbox-area">
-              <label for="sugarsubst">
-                <input type="checkbox" name="extra" id="sugarsubst" value="sugarsubst">
-                <span>Сахарозаменитель</span>
-              </label>
+              <div class="checkbox">
+                <label>
+                  <input class="checkbox__input" type="checkbox" name="extra" value="sugarsubst">
+                  <span class="checkbox__label">Сахарозаменитель</span>
+                </label>
+              </div>
             </div>
 
             <div class="form__row-item form__checkbox-area">
-              <label for="water">
-                <input type="checkbox" name="extra" id="water" value="water">
-                <span>Питьевая вода</span>
-              </label>
+              <div class="checkbox">
+                <label>
+                  <input class="checkbox__input" type="checkbox" name="extra" value="water">
+                  <span class="checkbox__label">Питьевая вода</span>
+                </label>
+              </div>
             </div>
 
             <div class="form__row-item form__checkbox-area">
-              <label for="milk">
-                <input type="checkbox" name="extra" id="milk" value="milk">
-                <span>Молоко</span>
-              </label>
+              <div class="checkbox">
+                <label>
+                  <input class="checkbox__input" type="checkbox" name="extra" value="milk">
+                  <span class="checkbox__label">Молоко</span>
+                </label>
+              </div>
             </div>
 
             <div class="form__row-item form__checkbox-area">
-              <label for="vatamins">
-                <input type="checkbox" name="extra" id="vatamins" value="vatamins">
-                <span>Витамины</span>
-              </label>
+              <div class="checkbox">
+                <label>
+                  <input class="checkbox__input" type="checkbox" name="extra" value="vatamins">
+                  <span class="checkbox__label">Витамины</span>
+                </label>
+              </div>
             </div>
 
           </div>
         </section>
 
-        <section class="form__fieldset">
-
+        <section class="form__fieldset form__fieldset--final">
           <div class="form__row form__row--final">
             <div class="form__row-item form__submit">
               <input type="submit" class="button" value="Отправить заявку">
             </div>
 
-            <div class="form__row-item form__note section-text">* -- Обязательные поля</div>
+            <div class="form__row-item form__note section-text">* &mdash; Обязательные поля</div>
           </div>
         </section>
       </form>
