@@ -44,15 +44,14 @@
 
     <main class="page-main">
       <form class="form" action="https://echo.htmlacademy.ru">
-        <h2 class="form__title section-title">Подбор программы</h2>
+        <h2 class="form__title">Подбор программы</h2>
         <p class="form__text">Заполните анкету и мы подберем<br> программу питания для вашего кота</p>
 
-        <section class="form__fieldset form__fieldset--base-info">
+        <section class="form-section form-section--base-info">
           <h3 class="visually-hidden">Основные сведения</h3>
 
-          <div class="form__row form__row--main-info">
-            <div class="form__row-item">
-
+          <div class="box">
+            <div class="cell cell--m-2of2 cell--t-4of4 cell--d-2of4">
               <div class="form__group textbox">
                 <label>
                   <span class="textbox__label">Имя:*</span>
@@ -75,7 +74,7 @@
               </div>
             </div>
 
-            <div class="form__row-item">
+            <div class="cell cell--m-2of2 cell--t-4of4 cell--d-2of4">
               <div class="form__radio-group">
 
                 <div class="form__radio-area radio">
@@ -105,12 +104,12 @@
 
         </section>
 
-        <section class="form__fieldset form__fieldset--contacts">
+        <section class="form-section form-section--contacts">
           <h3 class="form__legend">Контактные данные (владельца кота)</h3>
 
-          <div class="form__row form__row--contacts">
+          <div class="box">
 
-            <div class="form__row-item">
+            <div class="cell cell--m-2of2 cell--t-4of4 cell--d-2of4">
               <div class="form__group textbox">
                 <label>
                   <span class="textbox__label">e-mail:*</span>
@@ -119,7 +118,7 @@
               </div>
             </div>
 
-            <div class="form__row-item">
+            <div class="cell cell--m-2of2 cell--t-4of4 cell--d-2of4">
               <div class="form__group textbox">
                 <label>
                   <span class="textbox__label">Телефон:*</span>
@@ -131,11 +130,11 @@
           </div>
         </section>
 
-        <section class="form__fieldset form__fieldset--comment">
+        <section class="form-section form-section--comment">
           <h3 class="form__legend">Комментарий</h3>
 
-          <div class="form__row form__row--comment">
-            <div class="form__row-item">
+          <div class="box">
+            <div class="cell cell--m-2of2 cell--t-4of4 cell--d-4of4">
               <div class="form__group textarea">
                 <label>
                   <span class="textarea__label"></span>
@@ -146,13 +145,13 @@
           </div>
         </section>
 
-        <section class="form__fieldset form__fieldset--extra">
+        <section class="form-section form-section--extra">
           <h3 class="form__legend">Дополнительно</h3>
 
-          <div class="form__row form__row--extra">
+          <div class="box">
 
-            <div class="form__row-item form__checkbox-area">
-              <div class="checkbox">
+            <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
+              <div class="form__checkbox checkbox">
                 <label>
                   <input class="checkbox__input" type="checkbox" name="extra" value="sugarsubst">
                   <span class="checkbox__label">Сахарозаменитель</span>
@@ -160,8 +159,8 @@
               </div>
             </div>
 
-            <div class="form__row-item form__checkbox-area">
-              <div class="checkbox">
+            <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
+              <div class="form__checkbox checkbox">
                 <label>
                   <input class="checkbox__input" type="checkbox" name="extra" value="water">
                   <span class="checkbox__label">Питьевая вода</span>
@@ -169,8 +168,8 @@
               </div>
             </div>
 
-            <div class="form__row-item form__checkbox-area">
-              <div class="checkbox">
+            <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
+              <div class="form__checkbox checkbox">
                 <label>
                   <input class="checkbox__input" type="checkbox" name="extra" value="milk">
                   <span class="checkbox__label">Молоко</span>
@@ -178,8 +177,8 @@
               </div>
             </div>
 
-            <div class="form__row-item form__checkbox-area">
-              <div class="checkbox">
+            <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
+              <div class="form__checkbox checkbox">
                 <label>
                   <input class="checkbox__input" type="checkbox" name="extra" value="vatamins">
                   <span class="checkbox__label">Витамины</span>
@@ -190,13 +189,23 @@
           </div>
         </section>
 
-        <section class="form__fieldset form__fieldset--final">
-          <div class="form__row form__row--final">
-            <div class="form__row-item form__submit">
-              <input type="submit" class="button" value="Отправить заявку">
+        <section class="form-section form-section--final">
+          <h3 class="visually-hidden">Завершение</h3>
+
+          <div class="box">
+
+            <div class="cell cell--m-2of2 cell--t-2of4 cell--d-2of4">
+              <div class="form__submit">
+                <input class="btn btn--accent" type="submit" value="Отправить заявку">
+              </div>
             </div>
 
-            <div class="form__row-item form__note section-text">* &mdash; Обязательные поля</div>
+            <div class="cell cell--m-2of2 cell--t-2of4 cell--d-2of4">
+              <div class="form__note">
+                * &mdash; Обязательные поля
+              </div>
+            </div>
+
           </div>
         </section>
       </form>

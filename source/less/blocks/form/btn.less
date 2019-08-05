@@ -1,0 +1,24 @@
+.btn {
+  flex-grow: 1;
+
+  font: normal 16px/20px "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+
+  padding: 10px;
+
+  background-color: @color-accent;
+  color: white;
+
+  border: none;
+
+  .debug();
+}
+
+@media (min-width: @width-tablet) {
+  .btn {
+    font: normal 20px/20px "Oswald", "Arial", sans-serif;
+
+    padding: 15px;
+    padding-bottom: 17px;
+  }
+}

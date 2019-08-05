@@ -1,0 +1,185 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin: 0;
+  padding: 0;
+  padding-top: 28px;
+
+  .debug();
+}
+
+.form__title {
+  font: normal 36px/36px "Oswald", "Arial", sans-serif;
+  margin: 0;
+  margin-left: @margin-mobile;
+  padding: 0;
+}
+
+.form__text {
+  font: normal 14px/18px "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+
+  padding: 0;
+  margin: 0;
+  margin-left: @margin-mobile;
+  margin-top: 36px;
+  margin-bottom: 36px - 1px;
+}
+
+.form__legend {
+  font: normal 24px/24px "Oswald", "Arial", sans-serif;
+
+  margin: 0;
+  padding: 0;
+  padding-left: @margin-mobile;
+  padding-right: @margin-mobile;
+  padding-bottom: 28px;
+}
+
+.form__radio-group {
+  margin: 0;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  padding: 0;
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  border: 1px solid #ededed;
+
+  .debug(lime);
+}
+
+.form__checkbox {
+  margin: 0;
+  padding: 0;
+  padding-top: 12px;
+}
+
+.form__submit {
+  display: flex;
+  justify-content: stretch;
+  align-content: stretch;
+
+  margin: 0;
+  margin-left: @margin-mobile;
+  margin-right: @margin-mobile;
+}
+
+.form__note {
+  font: normal 14px/16px "Arial", sans-serif;
+
+  box-sizing: border-box;
+  width: 100%;
+
+  text-align: center;
+
+  margin: 0;
+  padding: 20px;
+}
+
+/* ********************************************************* */
+@media (min-width: @width-tablet) {
+  .form {
+    padding: 0;
+    padding-top: 53px;
+  }
+
+  .form__title {
+    font: normal 60px/60px "Oswald", "Arial", sans-serif;
+    padding: 0;
+    margin: 0;
+    margin-left: @margin-tablet - 1px;
+  }
+
+  .form__text {
+    font: normal 20px/30px "Oswald", "Arial", sans-serif;
+
+    padding: 0;
+    margin: 0;
+    margin-top: 55px;
+    margin-bottom: 55px + 1px;
+    margin-left: @margin-tablet + 40px;
+  }
+
+  .form__legend {
+    font: normal 36px/36px "Oswald", "Arial", sans-serif;
+
+    margin: 0;
+    margin-left: @margin-tablet;
+    padding: 0;
+    padding-left: 40px - 1px;
+    padding-bottom: 65px;
+  }
+
+  .form__radio-group {
+    margin: 0;
+    margin-top: 63px;
+
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 14px;
+  }
+
+  .form__checkbox {
+    margin: 0;
+    padding: 0;
+    padding-top: 2px;
+  }
+
+  .form__submit {
+    margin: 0;
+    padding: 0;
+  }
+
+  .form__note {
+    font: normal 16px/16px "Arial", sans-serif;
+
+    text-align: left;
+
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+  }
+}
+
+/* ********************************************************* */
+@media (min-width: @width-desktop) {
+  .form {
+    padding: 0;
+    padding-top: 28px;
+  }
+
+  .form__title {
+    font: normal 60px/60px "Oswald", "Arial", sans-serif;
+    padding: 0;
+    margin: 0;
+    margin-left: @margin-desktop;
+  }
+
+  .form__text {
+    font: normal 20px/30px "Oswald", "Arial", sans-serif;
+
+    padding: 0;
+    margin: 0;
+    margin-top: 55px;
+    margin-bottom: 55px + 1px;
+    margin-left: @margin-desktop;
+  }
+
+  .form__legend {
+    margin: 0;
+    padding: 0;
+    padding-left: @margin-desktop;
+    padding-bottom: 65px;
+  }
+
+  .form__radio-group {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 14px;
+  }
+}
