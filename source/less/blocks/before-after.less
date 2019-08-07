@@ -1,16 +1,18 @@
 .before-after {
   display: block;
+
+  // background-color: pink;
+  .debug();
 }
 
 .before-after__image {
   display: block;
   margin: 0;
-  padding: 0;
+  margin-left: auto;
 
   &--before {
-    // empty
 
-    .debug();
+    .debug(lime);
   }
 
   &--after {
@@ -22,19 +24,20 @@
   margin: 0;
   margin-top: 32px;
 
+  // background-color: pink;
   .debug();
 }
 
 /* *********************************************************************** */
-@media (min-width: 768px) {
+@media (min-width: @width-tablet) {
   .before-after__control-panel {
-    margin: 0;
-    margin-top: 12px;
+    margin: 0 auto;
+    margin-top: 11px;
   }
 }
 
 /* *********************************************************************** */
-@media (min-width: 768px) {
+@media (min-width: @width-desktop) {
   .before-after__control-panel {
     margin: 0;
     margin-top: 33px;

@@ -1,19 +1,20 @@
 .live-example {
+  background-color: rgb(242, 242, 242);
+}
+
+.live-example__container {
   display: flex;
   flex-direction: column;
 
-  margin: 0;
-  margin-top: @margin-mobile + 2px;
   padding: @margin-mobile;
+  padding-top: @margin-mobile + 2px;
 
   box-sizing: border-box;
   min-height: 705px; // временно
 
-  background-color: rgb(242, 242, 242);
-
-
   .debug();
 }
+
 
 .live-example__title {
   margin: 0;
@@ -89,13 +90,33 @@
 /* ****************************************************************************** */
 @media (min-width: @width-tablet) {
   .live-example {
+    background-color: transparent;
+    border-top: 1px solid #e6e6e6;
+
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+
+      box-sizing: border-box;
+      width: 100%;
+      height: 462px;
+
+      left: 0;
+      bottom: 0;
+
+      background-color: #f2f2f2; // правая часть #eaeaea
+    }
+  }
+
+  .live-example__container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: flex-start;
 
-    margin: 0;
     padding-top: 27px;
     padding-left: @margin-tablet;
     padding-right: @margin-tablet;
@@ -174,10 +195,10 @@
 
     flex-shrink: 0;
 
+    left: auto;
+
     margin: 0;
     margin-top: 85px;
-
-    left: 16px;
 
     box-sizing: border-box;
     width: 100%;
@@ -187,13 +208,17 @@
 /* ****************************************************************************** */
 @media (min-width: @width-desktop) {
   .live-example {
+    border: none;
+  }
+
+
+  .live-example__container {
     position: relative;
 
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 
-    margin: 0;
     padding: 0;
     padding-left: @margin-desktop;
     padding-right: @margin-desktop;
@@ -204,28 +229,6 @@
     background-color: transparent;
 
     border: none;
-  }
-
-  .live-example::before {
-    content: "";
-    display: block;
-    position: absolute;
-
-    box-sizing: border-box;
-    height: 460px;
-
-    bottom: 0;
-
-
-    z-index: -10;
-
-    background-color: #f2f2f2;
-
-    left: calc(@width-desktop / 2 - 50vw); /* stylelint-disable-line function-calc-no-invalid */
-    // Предотвращение появления горизонтального скроллбара при ширине блока равной ширине вьюпорта
-    // * работает только при выравнивании блока по центру экрана *
-    @vertical-scrollbar-width: 17px;
-    width: calc(100vw - @vertical-scrollbar-width/2); /* stylelint-disable-line function-calc-no-invalid */
   }
 
   .live-example__title {

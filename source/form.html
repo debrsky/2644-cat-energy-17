@@ -13,8 +13,8 @@
 </head>
 
 <body>
-  <div class="container">
-    <header class="page-header page-header--mobile-nav-hidden">
+  <header class="page-header page-header--mobile-nav-hidden">
+    <div class="container page-header__container">
       <div class="page-header__logo">
         <a class="logo">
           <picture>
@@ -22,7 +22,7 @@
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
             <img src="img/logo-mobile.svg" alt="Cat energy">
             <!-- размеры картинок logo-*.svg указаны в атрибутах width и height самих файлов;
-                 через атрибуты srcset и sizes размеры не работают по непонятной причине -->
+                           через атрибуты srcset и sizes размеры не работают по непонятной причине -->
           </picture>
         </a>
       </div>
@@ -43,198 +43,208 @@
           </li>
         </ul>
       </nav>
+    </div>
+
+  </header>
+
+  <main class="page-main">
+    <form class="container form" action="https://echo.htmlacademy.ru">
+      <h2 class="form__title">Подбор программы</h2>
+      <p class="form__text">Заполните анкету и мы подберем<br> программу питания для вашего кота</p>
+
+      <section class="form-section form-section--base-info">
+        <h3 class="visually-hidden">Основные сведения</h3>
+
+        <div class="box">
+          <div class="cell cell--m-2of2 cell--t-4of4 cell--d-2of4">
+            <div class="form__group textbox">
+              <label>
+                <span class="textbox__label">Имя:*</span>
+                <input class="textbox__input" type="text" name="catname" value="БАРСИК" required>
+              </label>
+            </div>
+
+            <div class="form__group textbox">
+              <label>
+                <span class="textbox__label">Вес (кг):*&nbsp;</span>
+                <input class="textbox__input" type="text" name="catweight" value="7" required>
+              </label>
+            </div>
+
+            <div class="form__group textbox">
+              <label>
+                <span class="textbox__label">Возраст (лет):</span>
+                <input class="textbox__input" type="text" name="catage" value="7">
+              </label>
+            </div>
+          </div>
+
+          <div class="cell cell--m-2of2 cell--t-4of4 cell--d-2of4">
+            <div class="form__radio-group">
+
+              <div class="form__radio-area radio">
+                <label>
+                  <input class="radio__input" type="radio" name="goal" value="slim">
+                  <span class="radio__label">Похудение</span>
+                </label>
+              </div>
+
+              <div class="form__radio-area radio">
+                <label>
+                  <input class="radio__input" type="radio" name="goal" value="fat">
+                  <span class="radio__label">Набор массы<span>
+                </label>
+              </div>
+
+              <div class="form__radio-area radio">
+                <label>
+                  <input class="radio__input" type="radio" name="goal" value="needadvice" checked>
+                  <span class="radio__label">Не знаю (нужен ваш совет)</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="form-section form-section--contacts">
+        <h3 class="form__legend">Контактные данные (владельца кота)</h3>
+
+        <div class="box">
+
+          <div class="cell cell--m-2of2 cell--t-4of4 cell--d-2of4">
+            <div class="form__group textbox">
+              <label>
+                <span class="textbox__label">e-mail:*</span>
+                <input class="textbox__input textbox__input--email" type="email" name="email"
+                  value="KUKLACHEV@GMAIL.COM" required>
+              </label>
+            </div>
+          </div>
+
+          <div class="cell cell--m-2of2 cell--t-4of4 cell--d-2of4">
+            <div class="form__group textbox">
+              <label>
+                <span class="textbox__label">Телефон:*</span>
+                <input class="textbox__input textbox__input--tel" type="tel" name="tel" value="8(960)900-60-90"
+                  required>
+              </label>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="form-section form-section--comment">
+        <h3 class="form__legend">Комментарий</h3>
+
+        <div class="box">
+          <div class="cell cell--m-2of2 cell--t-4of4 cell--d-4of4">
+            <div class="form__group textarea">
+              <label>
+                <span class="textarea__label"></span>
+                <textarea class="textarea__self" name="about"
+                  placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="form-section form-section--extra">
+        <h3 class="form__legend">Дополнительно</h3>
+
+        <div class="box">
+
+          <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
+            <div class="form__checkbox checkbox">
+              <label>
+                <input class="checkbox__input" type="checkbox" name="extra" value="sugarsubst">
+                <span class="checkbox__label">Сахарозаменитель</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
+            <div class="form__checkbox checkbox">
+              <label>
+                <input class="checkbox__input" type="checkbox" name="extra" value="water">
+                <span class="checkbox__label">Питьевая вода</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
+            <div class="form__checkbox checkbox">
+              <label>
+                <input class="checkbox__input" type="checkbox" name="extra" value="milk">
+                <span class="checkbox__label">Молоко</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
+            <div class="form__checkbox checkbox">
+              <label>
+                <input class="checkbox__input" type="checkbox" name="extra" value="vatamins">
+                <span class="checkbox__label">Витамины</span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="form-section form-section--final">
+        <h3 class="visually-hidden">Завершение</h3>
+
+        <div class="box">
+
+          <div class="cell cell--m-2of2 cell--t-2of4 cell--d-2of4">
+            <div class="form__submit">
+              <input class="btn btn--accent" type="submit" value="Отправить заявку">
+            </div>
+          </div>
+
+          <div class="cell cell--m-2of2 cell--t-2of4 cell--d-2of4">
+            <div class="form__note">
+              * &mdash; Обязательные поля
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </form>
+  </main>
+
+  <article class="contacts contacts--index">
+
+    <header class="container contacts__header">
+      <h2 class="contacts__title">Приглашаем <br>к сотрудничеству дилеров!</h2>
+      <address class="contacts__address">
+        ул. Большая Конюшенная, д.&nbsp;19/8<br> <br>Санкт-Петербург
+      </address>
     </header>
 
-    <main class="page-main">
-      <form class="form" action="https://echo.htmlacademy.ru">
-        <h2 class="form__title">Подбор программы</h2>
-        <p class="form__text">Заполните анкету и мы подберем<br> программу питания для вашего кота</p>
-
-        <section class="form-section form-section--base-info">
-          <h3 class="visually-hidden">Основные сведения</h3>
-
-          <div class="box">
-            <div class="cell cell--m-2of2 cell--t-4of4 cell--d-2of4">
-              <div class="form__group textbox">
-                <label>
-                  <span class="textbox__label">Имя:*</span>
-                  <input class="textbox__input" type="text" name="catname" value="БАРСИК" required>
-                </label>
-              </div>
-
-              <div class="form__group textbox">
-                <label>
-                  <span class="textbox__label">Вес (кг):*&nbsp;</span>
-                  <input class="textbox__input" type="text" name="catweight" value="7" required>
-                </label>
-              </div>
-
-              <div class="form__group textbox">
-                <label>
-                  <span class="textbox__label">Возраст (лет):</span>
-                  <input class="textbox__input" type="text" name="catage" value="7">
-                </label>
-              </div>
-            </div>
-
-            <div class="cell cell--m-2of2 cell--t-4of4 cell--d-2of4">
-              <div class="form__radio-group">
-
-                <div class="form__radio-area radio">
-                  <label>
-                    <input class="radio__input" type="radio" name="goal" value="slim">
-                    <span class="radio__label">Похудение</span>
-                  </label>
-                </div>
-
-                <div class="form__radio-area radio">
-                  <label>
-                    <input class="radio__input" type="radio" name="goal" value="fat">
-                    <span class="radio__label">Набор массы<span>
-                  </label>
-                </div>
-
-                <div class="form__radio-area radio">
-                  <label>
-                    <input class="radio__input" type="radio" name="goal" value="needadvice" checked>
-                    <span class="radio__label">Не знаю (нужен ваш совет)</span>
-                  </label>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </section>
-
-        <section class="form-section form-section--contacts">
-          <h3 class="form__legend">Контактные данные (владельца кота)</h3>
-
-          <div class="box">
-
-            <div class="cell cell--m-2of2 cell--t-4of4 cell--d-2of4">
-              <div class="form__group textbox">
-                <label>
-                  <span class="textbox__label">e-mail:*</span>
-                  <input class="textbox__input textbox__input--email" type="email" name="email" value="KUKLACHEV@GMAIL.COM" required>
-                </label>
-              </div>
-            </div>
-
-            <div class="cell cell--m-2of2 cell--t-4of4 cell--d-2of4">
-              <div class="form__group textbox">
-                <label>
-                  <span class="textbox__label">Телефон:*</span>
-                  <input class="textbox__input textbox__input--tel" type="tel" name="tel" value="8(960)900-60-90" required>
-                </label>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <section class="form-section form-section--comment">
-          <h3 class="form__legend">Комментарий</h3>
-
-          <div class="box">
-            <div class="cell cell--m-2of2 cell--t-4of4 cell--d-4of4">
-              <div class="form__group textarea">
-                <label>
-                  <span class="textarea__label"></span>
-                  <textarea class="textarea__self" name="about" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
-                </label>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="form-section form-section--extra">
-          <h3 class="form__legend">Дополнительно</h3>
-
-          <div class="box">
-
-            <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
-              <div class="form__checkbox checkbox">
-                <label>
-                  <input class="checkbox__input" type="checkbox" name="extra" value="sugarsubst">
-                  <span class="checkbox__label">Сахарозаменитель</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
-              <div class="form__checkbox checkbox">
-                <label>
-                  <input class="checkbox__input" type="checkbox" name="extra" value="water">
-                  <span class="checkbox__label">Питьевая вода</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
-              <div class="form__checkbox checkbox">
-                <label>
-                  <input class="checkbox__input" type="checkbox" name="extra" value="milk">
-                  <span class="checkbox__label">Молоко</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
-              <div class="form__checkbox checkbox">
-                <label>
-                  <input class="checkbox__input" type="checkbox" name="extra" value="vatamins">
-                  <span class="checkbox__label">Витамины</span>
-                </label>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <section class="form-section form-section--final">
-          <h3 class="visually-hidden">Завершение</h3>
-
-          <div class="box">
-
-            <div class="cell cell--m-2of2 cell--t-2of4 cell--d-2of4">
-              <div class="form__submit">
-                <input class="btn btn--accent" type="submit" value="Отправить заявку">
-              </div>
-            </div>
-
-            <div class="cell cell--m-2of2 cell--t-2of4 cell--d-2of4">
-              <div class="form__note">
-                * &mdash; Обязательные поля
-              </div>
-            </div>
-
-          </div>
-        </section>
-      </form>
-    </main>
-
-    <article class="contacts">
-      <header class="contacts__header">
-        <h2 class="contacts__title">Приглашаем <br>к сотрудничеству дилеров!</h2>
-        <address class="contacts__address">
-          ул. Большая Конюшенная, д.&nbsp;19/8<br> <br>Санкт-Петербург
-        </address>
-      </header>
-      <div class="contacts__map">
-        <div class="map">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
-            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
-            <img src="img/bg-map-mobile@1x.png" alt="карта" class="map__image" width="320" height="400">
-          </picture>
-        </div>
+    <div class="contacts__map">
+      <div class="map">
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
+          <img src="img/bg-map-mobile@1x.png" alt="карта" class="map__image" width="320" height="400">
+        </picture>
       </div>
-    </article>
+    </div>
 
-    <footer class="page-footer">
+  </article>
+
+  <footer class="page-footer">
+
+    <div class="container page-footer__container">
       <div class="page-footer__logo">
-        <a class="logo-footer" href="index.html">
+        <a class="logo-footer">
           <img src="img/logo-footer.svg" width="127.8" alt="Cat Energy">
         </a>
       </div>
@@ -251,9 +261,9 @@
           HTML Academy
         </a>
       </div>
-    </footer>
+    </div>
 
-  </div>
+  </footer>
 </body>
 
 </html>

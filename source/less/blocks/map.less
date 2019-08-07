@@ -12,14 +12,6 @@
 
 .map__image {
   display: block;
-  position: absolute;
-
-  left: 50%;
-  top: 50%;
-
-  transform: translate(-50%, -50%);
-
-  margin: 0 auto;
 
   box-sizing: border-box;
   width: 100%;
@@ -34,17 +26,7 @@
 
 @media (min-width: @width-desktop) {
   .map {
-    position: absolute;
     height: 400px;
-
-    // Предотвращение появления горизонтального скроллбара при ширине блока равной ширине вьюпорта
-    // * работает только при выравнивании блока по центру экрана *
-    @vertical-scrollbar-width: 17px;
-    width: calc(100vw - @vertical-scrollbar-width/2); /* stylelint-disable-line function-calc-no-invalid */
-
-    top: 0;
-    left: calc(@width-desktop / 2 - 50vw); /* stylelint-disable-line function-calc-no-invalid */
-    //overflow: hidden;
 
     .debug(green);
   }

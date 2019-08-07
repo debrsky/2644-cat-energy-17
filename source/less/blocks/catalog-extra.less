@@ -1,6 +1,5 @@
 .catalog-extra {
-  margin: 0 @margin-mobile 0;
-  padding: @margin-mobile 0 35px;
+  padding: @margin-mobile @margin-mobile 35px;
 
   display: flex;
   flex-direction: column;
@@ -54,8 +53,7 @@
 /* *********************************************************************** */
 @media (min-width: @width-tablet) {
   .catalog-extra {
-    margin: @margin-tablet @margin-tablet 0;
-    padding: 38px 0 75px;
+    padding: (@margin-tablet + 38px) @margin-tablet 75px;
   }
 
   .catalog-extra__header {
@@ -97,10 +95,7 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    margin: @margin-desktop @margin-desktop 0;
-    padding: 0;
-    padding-top: 30px;
-    padding-bottom: 88px;
+    padding: (@margin-desktop + 30px) @margin-desktop 88px;
   }
 
   .catalog-extra__header {
