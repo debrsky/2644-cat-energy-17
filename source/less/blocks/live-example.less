@@ -106,7 +106,26 @@
       left: 0;
       bottom: 0;
 
-      background-color: #f2f2f2; // правая часть #eaeaea
+      background-color: #f2f2f2;
+
+      z-index: -10;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+
+      box-sizing: border-box;
+      width: 50vw;
+      height: 462px;
+
+      right: 0;
+      bottom: 0;
+
+      background-color: #eaeaea;
+
+      z-index: -10;
     }
   }
 
@@ -117,10 +136,8 @@
     justify-content: space-between;
     align-content: flex-start;
 
+    padding: 0;
     padding-top: 27px;
-    padding-left: @margin-tablet;
-    padding-right: @margin-tablet;
-    padding-bottom: 0;
 
     box-sizing: border-box;
     min-height: 1080px; // временно
@@ -128,6 +145,7 @@
 
   .live-example__list {
     margin: 0;
+    margin-left: @margin-tablet;
 
     justify-content: space-between;
     align-items: baseline;
@@ -149,6 +167,8 @@
   .live-example__costs {
     margin: 0;
     margin-top: 8px;
+    margin-right: @margin-tablet;
+
     padding: 0;
 
     text-align: right;
@@ -168,9 +188,10 @@
   }
 
   .live-example__title {
-    margin: 0;
     padding: 0;
+    margin: 0;
     margin-top: 16px;
+    margin-left: @margin-tablet;
     width: 100%;
 
     // background: gold;
@@ -178,12 +199,14 @@
 
   .live-example__desc {
     box-sizing: border-box;
-    width: calc(100% - 6px);
 
     font-size: 16px;
     line-height: 24px;
-    margin: 0;
+
     padding: 0;
+    padding-right: 2 * @margin-tablet - 6px;
+    margin: 0;
+    margin-left: @margin-tablet;
     margin-top: 65px;
     margin-bottom: 50px;
   }
@@ -195,11 +218,8 @@
 
     left: auto;
 
-    margin: 0;
+    margin: 0 auto;
     margin-top: 85px;
-
-    box-sizing: border-box;
-    width: 100%;
   }
 }
 
@@ -207,6 +227,10 @@
 @media (min-width: @width-desktop) {
   .live-example {
     border: none;
+
+    &::after {
+      width: calc(50vw - 2 * @margin-desktop - @column-desktop); /* stylelint-disable-line function-calc-no-invalid */
+    }
   }
 
 
@@ -269,12 +293,9 @@
     left: auto;
     bottom: auto;
     top: -55px;
-    right: 0;
+    right: -@margin-desktop;
 
     margin: 0;
     padding: 0;
-
-    box-sizing: border-box;
-    width: 690px;
   }
 }

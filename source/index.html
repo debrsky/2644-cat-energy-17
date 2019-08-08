@@ -144,18 +144,22 @@
         <div class="live-example__costs section-title3">Затраты на питание: <br><span>15&thinsp;000 руб.</span></div>
 
         <div class="live-example__before-after before-after">
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
-            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-            <img src="img/before-mobile@1x.png" alt="Толстый кот сидит"
-              class="before-after__image before-after__image--before">
-          </picture>
-          <picture>
-            <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
-            <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
-            <img src="img/after-mobile@1x.png" alt="Худой кот сидит"
-              class="before-after__image before-after__image--after">
-          </picture>
+
+          <div class="before-after__image-container before-after__image-container--before">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
+              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+              <img src="img/before-mobile@1x.png" alt="Толстый кот сидит" class="before-after__image">
+            </picture>
+          </div>
+
+          <div class="before-after__image-container before-after__image-container--after">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
+              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+              <img src="img/after-mobile@1x.png" alt="Худой кот сидит" class="before-after__image">
+            </picture>
+          </div>
 
           <div class="before-after__control-panel control-panel">
             <div class="control-panel__btn-wrapper control-panel__btn-wrapper--before">
