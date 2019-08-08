@@ -1,8 +1,6 @@
 .first-screen {
-  box-sizing: border-box;
   padding: 0;
   padding-top: 27px;
-  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -66,16 +64,15 @@
   .first-screen {
     align-items: flex-start;
     position: relative;
-    margin: @margin-tablet;
-    margin-bottom: 0;
 
-    padding: 0;
-    padding-top: 22px;
-    padding-left: 90px - 2px;
+    padding: @margin-tablet;
+    padding-top: @margin-tablet + 22px;
+    padding-left: @margin-tablet + 90px - 2px;
 
     background-image: none;
 
-    min-height: 835px;
+    box-sizing: border-box;
+    min-height: 835px + @margin-tablet;
   }
 
   .first-screen__title {
@@ -97,8 +94,11 @@
   .first-screen__image {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: @margin-tablet;
+
+    box-sizing: border-box;
     height: 609px;
+
     z-index: -10;
   }
 
@@ -123,14 +123,11 @@
   .first-screen {
     position: relative;
 
-    margin: @margin-desktop;
-    margin-bottom: 0;
+    padding: @margin-desktop;
+    padding-left: @margin-desktop + 80px;
+    padding-top: @margin-desktop + 20px;
 
-    padding: 0;
-    padding-left: 80px;
-    padding-top: 20px;
-
-    min-height: 696px - 2*@margin-desktop - 70px - @margin-desktop - 10px;
+    min-height: 696px - 158px // высота фоновой картинки - высота page_header;
   }
 
   .first-screen__title {
@@ -152,8 +149,10 @@
 
   .first-screen__image {
     position: absolute;
-    top: -84px;
-    right: 220px;
+    top: -40px;
+    right: 260px;
+
+    box-sizing: border-box;
     height: 499px;
   }
 

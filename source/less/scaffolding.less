@@ -24,30 +24,3 @@ body {
 
   background-color: white;
 }
-
-.container {
-  display: flex;
-  flex-direction: column;
-  width: @width-mobile;
-  padding: 0 0;
-  margin: 0 auto;
-
-  .debug();
-}
-
-@media (min-width: @width-tablet) {
-  .container {
-    width: @width-tablet;
-  }
-}
-
-@media (min-width: @width-desktop) {
-  .container {
-    width: @width-desktop;
-  }
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}

@@ -1,5 +1,5 @@
 .categories {
-  margin: 0 @margin-mobile;
+  padding: 0 @margin-mobile;
 
   .debug();
 }
@@ -24,9 +24,10 @@
   // empty
 }
 
+/* ******************************************************************** */
 @media (min-width: @width-tablet) {
   .categories {
-    margin: 0 @margin-tablet;
+    padding: 0 @margin-tablet 0;
   }
 
   .categories__item {
@@ -38,10 +39,11 @@
   }
 }
 
+/* ******************************************************************** */
 @media (min-width: @width-desktop) {
   .categories {
-    margin: 80px @margin-desktop @margin-desktop;
-    padding: 0;
+    padding: @margin-desktop;
+    padding-top: 2 * @margin-desktop;
   }
 
   .categories__list {

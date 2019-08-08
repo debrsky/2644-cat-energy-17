@@ -1,20 +1,101 @@
 .before-after {
-  display: block;
+  // закомментировано, потому что свойство
+  // установлено в .live-example__before-after
+  // position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  .debug();
+}
+
+.before-after__image-container {
+  position: relative;
+  overflow-x: hidden;
+
+  &--before {
+    box-sizing: border-box;
+    width: 100%;
+
+    .debug(lime);
+  }
+
+  &--after {
+    box-sizing: border-box;
+    width: 0;
+
+    & .before-after__image {
+      position: absolute;
+      right: 0;
+    }
+
+    .debug(black);
+  }
 }
 
 .before-after__image {
   display: block;
+}
+
+.before-after__control-panel {
+  box-sizing: border-box;
+  width: 100%;
+
   margin: 0;
-  padding: 0;
+  margin-top: 32px;
 
-  &--before {
-    // empty
+  // background-color: pink;
+  .debug();
+}
 
-
-    .debug();
+/* *********************************************************************** */
+@media (min-width: @width-tablet) {
+  .before-after {
+    box-sizing: border-box;
+    width: 2 * @column-desktop + 6 * @margin-desktop; // desktop (!)
   }
 
-  &--after {
-    display: none; // временно
+  .before-after__image-container {
+    &--before {
+      padding-left: @margin-tablet;
+      width: 50%;
+    }
+
+    &--after {
+      width: 50%;
+
+      & .before-after__image {
+        right: @margin-tablet / 2;
+      }
+    }
+  }
+
+  .before-after__control-panel {
+    margin: 0 auto;
+    margin-top: 11px;
+  }
+}
+
+/* *********************************************************************** */
+@media (min-width: @width-desktop) {
+  .before-after__image-container {
+    &--before {
+      padding: 0;
+      width: 50%;
+    }
+
+    &--after {
+      padding: 0;
+      width: 50%;
+
+      & .before-after__image {
+        right: @margin-desktop;
+      }
+    }
+  }
+
+  .before-after__control-panel {
+    margin: 0;
+    margin-top: 33px;
   }
 }

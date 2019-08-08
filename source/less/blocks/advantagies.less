@@ -1,7 +1,7 @@
 .advantagies {
-  margin: 0 @margin-mobile;
-  padding: 0;
+  padding: 0 @margin-mobile;
   padding-top: @margin-mobile + 10px;
+  padding-bottom: @margin-mobile;
 
   .debug();
 }
@@ -67,8 +67,7 @@
 /* ************************************************************* */
 @media (min-width: @width-tablet) {
   .advantagies {
-    margin: 0 @margin-tablet;
-    padding: 0;
+    padding: 0 @margin-tablet;
     padding-top: @margin-tablet + 13px;
     padding-bottom: 7px;
   }
@@ -146,9 +145,10 @@
 /* ***************************************************************************** */
 @media (min-width: @width-desktop) {
   .advantagies {
-    margin: 0 @margin-desktop (@margin-desktop - 9px);
-    padding: 0;
+    padding-left: @margin-desktop;
+    padding-right: @margin-desktop;
     padding-top: 30px;
+    padding-bottom: @margin-desktop - 9px;
   }
 
   .advantagies__title {
