@@ -206,7 +206,7 @@
     </form>
   </main>
 
-  <article class="contacts contacts--index">
+  <article class="contacts">
 
     <header class="container contacts__header">
       <h2 class="contacts__title">Приглашаем <br>к сотрудничеству дилеров!</h2>
@@ -218,9 +218,9 @@
     <div class="contacts__map">
       <div class="map">
         <picture>
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
-          <img src="img/bg-map-mobile@1x.png" alt="карта" class="map__image" width="320" height="400">
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+          <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" talt="карта" class="map__image">
         </picture>
       </div>
     </div>
