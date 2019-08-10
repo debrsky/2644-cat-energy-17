@@ -57,22 +57,22 @@
 
         <div class="box">
           <div class="cell cell--m-2of2 cell--t-4of4 cell--d-2of4">
-            <div class="form__group textbox">
-              <label>
+            <div class="form__textbox-area">
+              <label class="textbox">
                 <span class="textbox__label">Имя:*</span>
                 <input class="textbox__input" type="text" name="catname" value="БАРСИК" required>
               </label>
             </div>
 
-            <div class="form__group textbox">
-              <label>
+            <div class="form__textbox-area">
+              <label class="textbox">
                 <span class="textbox__label">Вес (кг):*&nbsp;</span>
                 <input class="textbox__input" type="text" name="catweight" value="7" required>
               </label>
             </div>
 
-            <div class="form__group textbox">
-              <label>
+            <div class="form__textbox-area">
+              <label class="textbox">
                 <span class="textbox__label">Возраст (лет):</span>
                 <input class="textbox__input" type="text" name="catage" value="7">
               </label>
@@ -82,21 +82,27 @@
           <div class="cell cell--m-2of2 cell--t-4of4 cell--d-2of4">
             <div class="form__radio-group">
 
-              <label class="radio">
-                <input class="visually-hidden" type="radio" name="goal" value="slim">
-                <span class="radio__indicator"></span>Похудение
-              </label>
+              <div class="form__radio-area">
+                <label class="radio">
+                  <input class="visually-hidden" type="radio" name="goal" value="slim">
+                  <span class="radio__indicator"></span>Похудение
+                </label>
+              </div>
+
+              <div class="form__radio-area">
+                <label class="radio">
+                  <input class="visually-hidden" type="radio" name="goal" value="fat">
+                  <span class="radio__indicator"></span>Набор массы
+                </label>
+              </div>
 
 
-              <label class="radio">
-                <input class="visually-hidden" type="radio" name="goal" value="fat">
-                <span class="radio__indicator"></span>Набор массы
-              </label>
-
-              <label class="radio">
-                <input class="visually-hidden" type="radio" name="goal" value="needadvice" checked>
-                <span class="radio__indicator"></span>Не знаю (нужен ваш совет)
-              </label>
+              <div class="form__radio-area">
+                <label class="radio">
+                  <input class="visually-hidden" type="radio" name="goal" value="needadvice" checked>
+                  <span class="radio__indicator"></span>Не знаю (нужен ваш совет)
+                </label>
+              </div>
             </div>
 
           </div>
@@ -110,8 +116,8 @@
         <div class="box">
 
           <div class="cell cell--m-2of2 cell--t-4of4 cell--d-2of4">
-            <div class="form__group textbox">
-              <label>
+            <div class="form__textbox-area">
+              <label class="textbox">
                 <span class="textbox__label">e-mail:*</span>
                 <input class="textbox__input textbox__input--email" type="email" name="email"
                   value="KUKLACHEV@GMAIL.COM" required>
@@ -120,8 +126,8 @@
           </div>
 
           <div class="cell cell--m-2of2 cell--t-4of4 cell--d-2of4">
-            <div class="form__group textbox">
-              <label>
+            <div class="form__textbox-area">
+              <label class="textbox">
                 <span class="textbox__label">Телефон:*</span>
                 <input class="textbox__input textbox__input--tel" type="tel" name="tel" value="8(960)900-60-90"
                   required>
@@ -137,8 +143,8 @@
 
         <div class="box">
           <div class="cell cell--m-2of2 cell--t-4of4 cell--d-4of4">
-            <div class="form__group textarea">
-              <label>
+            <div class="form__textarea-area">
+              <label class="textarea">
                 <span class="textarea__label"></span>
                 <textarea class="textarea__self" name="about"
                   placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
@@ -146,39 +152,48 @@
             </div>
           </div>
         </div>
+
       </section>
 
       <section class="form-section form-section--extra">
-        <h3 class="form__legend">Дополнительно</h3>
+        <h3 class="form__legend form__legend--extra">Дополнительно</h3>
 
         <div class="box">
 
           <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
-            <label class="checkbox">
-                <input class="visually-hidden" type="checkbox" name="extra" value="sugarsubst">
+            <div class="form__checkbox-area">
+              <label class="checkbox">
+                <input class="visually-hidden" type="checkbox" name="extra" value="sugarsubst" checked>
                 <span class="checkbox__indicator"></span>Сахарозаменитель
-            </label>
+              </label>
+            </div>
           </div>
 
           <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
-            <label class="checkbox">
-              <input class="visually-hidden" type="checkbox" name="extra" value="water">
-              <span class="checkbox__indicator"></span>Питьевая вода
-            </label>
+            <div class="form__checkbox-area">
+              <label class="checkbox">
+                <input class="visually-hidden" type="checkbox" name="extra" value="water">
+                <span class="checkbox__indicator"></span>Питьевая вода
+              </label>
+            </div>
           </div>
 
           <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
-            <label class="checkbox">
-              <input class="visually-hidden" type="checkbox" name="extra" value="milk">
-              <span class="checkbox__indicator"></span>Молоко
-            </label>
+            <div class="form__checkbox-area">
+              <label class="checkbox">
+                <input class="visually-hidden" type="checkbox" name="extra" value="milk">
+                <span class="checkbox__indicator"></span>Молоко
+              </label>
+            </div>
           </div>
 
           <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
-            <label class="checkbox">
-              <input class="visually-hidden" type="checkbox" name="extra" value="vatamins">
-              <span class="checkbox__indicator"></span>Витамины
-            </label>
+            <div class="form__checkbox-area">
+              <label class="checkbox">
+                <input class="visually-hidden" type="checkbox" name="extra" value="vatamins">
+                <span class="checkbox__indicator"></span>Витамины
+              </label>
+            </div>
           </div>
 
         </div>

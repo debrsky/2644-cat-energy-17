@@ -27,6 +27,40 @@
   margin-bottom: 36px - 1px;
 }
 
+.form__textbox-area {
+  // empty
+}
+
+.form__radio-area {
+  padding-left: 19px;
+  padding-top: 6px;
+
+  box-sizing: border-box;
+  min-height: 42.5px;
+}
+
+.form__checkbox-area {
+  padding-left: 20px;
+  padding-top: 7px;
+
+  box-sizing: border-box;
+  min-height: 42.5px;
+}
+
+.form__textarea-area {
+  display: flex;
+  justify-content: stretch;
+  align-content: stretch;
+
+  box-sizing: border-box;
+  min-height: 163px;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: @margin-mobile;
+  padding-right: @margin-mobile;
+}
+
 .form__legend {
   font: normal 24px/24px "Oswald", "Arial", sans-serif;
 
@@ -96,6 +130,25 @@
     margin-left: @margin-tablet + 40px;
   }
 
+  .form__radio-area {
+    box-sizing: border-box;
+    min-height: 53px;
+
+    padding: 3px;
+    padding-left: 28px;
+  }
+
+  .form__checkbox-area {
+    box-sizing: border-box;
+    min-height: 53px;
+
+    padding: 0;
+  }
+
+  .form__textarea-area {
+    padding: 0;
+  }
+
   .form__legend {
     font: normal 36px/36px "Oswald", "Arial", sans-serif;
 
@@ -163,9 +216,7 @@
 
   .form__legend {
     margin: 0;
-    padding: 0;
     padding-left: @margin-desktop;
-    padding-bottom: 65px;
   }
 
   .form__radio-group {

@@ -1,21 +1,9 @@
 .textarea {
-  box-sizing: border-box;
-  height: 163px;
+  flex-grow: 1;
 
-  padding: 0;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: @margin-mobile;
-  padding-right: @margin-mobile;
-
-  & label {
-    display: flex;
-    flex-direction: column;
-
-    box-sizing: content-box;
-    width: 100%;
-    height: 100%;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
 
   .debug();
 }
@@ -31,7 +19,6 @@
   text-transform: uppercase;
 
   box-sizing: content-box;
-  height: 100%;
 
   padding: 12px 14px;
   padding-right: 13px;
