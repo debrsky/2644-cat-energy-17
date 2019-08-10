@@ -11,11 +11,21 @@
   color: #111111;
   text-transform: uppercase;
 
+  background-color: transparent;
   border: none;
-  background: inherit;
+
+  border-bottom: 1px dotted #bebebe;
 
   margin: 0;
   padding: 0;
+
+  &:hover {
+    border-bottom-style: solid;
+  }
+
+  &:active {
+    border: none;
+  }
 
   .debug();
 }
@@ -64,6 +74,17 @@
   padding: 4px;
   padding-top: 4px;
   padding-bottom: 4px;
+
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+  &:hover {
+    box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &:active {
+    box-shadow: 0px 4px 5px 0 rgba(0, 0, 0, 0.3);
+    border: solid 2px @color-accent;
+  }
 }
 
 .control-panel__slider::before {
@@ -84,8 +105,6 @@
   .control-panel__btn {
     font-size: 20px;
     line-height: 20px;
-
-    border-bottom: 1px dotted #bebebe;
   }
 
   .control-panel__slider-wrapper {
