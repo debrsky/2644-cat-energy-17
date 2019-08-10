@@ -13,13 +13,33 @@
   padding: 10px;
   border: none;
 
+  &:hover:not(:disabled) {
+    background-color: @color-accent-deep;
+  }
+
+  &:active {
+    background-color: @color-accent-deep;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   &--muted {
     background-color: #f2f2f2;
     color: black;
+
+    &:hover:not(:disabled) {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      background-color: #ebebeb;
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 
   .debug();
 }
+
+
 
 @media (min-width: @width-tablet) {
   .btn {
