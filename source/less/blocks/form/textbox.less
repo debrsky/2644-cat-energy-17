@@ -36,6 +36,23 @@
 
   box-sizing: border-box;
   height: 45px;
+
+  color: #444444;
+  border: 1px solid rgba(#cdcdcd, 0.5);
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:invalid {
+    border: 2px solid #ff8282;
+  }
+
+  &:active, &:focus {
+    outline: none;
+    border: 2px solid currentColor;
+  }
+
 }
 
 /* *********************************************************************************************** */
