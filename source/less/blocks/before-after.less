@@ -78,18 +78,22 @@
 
 /* *********************************************************************** */
 @media (min-width: @width-desktop) {
+  .before-after {
+    width: 730px - @margin-desktop;
+  }
+
   .before-after__image-container {
     &--before {
       padding: 0;
-      width: 50%;
+      width: 730px / 2;
     }
 
     &--after {
       padding: 0;
-      width: 50%;
+      width: 730px / 2 - @margin-desktop;
 
       & .before-after__image {
-        right: @margin-desktop;
+        right: 0;
       }
     }
   }

@@ -14,19 +14,12 @@
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
   margin-top: -1px;
-
-  // background-color: pink;
 }
 
 .site-list__item a {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 20px;
+  font: normal 20px/20px "Oswald", "Arial", sans-serif;
   text-decoration: none;
-  color: inherit;
-
-  // background-color: pink;
+  color: #111111;
 }
 
 @media (min-width: @width-tablet) {
@@ -44,7 +37,20 @@
     font-size: 18px;
     font-weight: normal;
     line-height: 24.86px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
+
+  .site-list__item--active a {
+    border-bottom: 2px solid @color-accent;
+  }
+
 
   .site-list__item:last-child {
     padding-right: 0;
@@ -54,5 +60,13 @@
 @media (min-width: @width-desktop) {
   .site-list__item a {
     font-size: 20px;
+  }
+
+  .page-header--accent .site-list__item a {
+    color: white;
+  }
+
+  .page-header--accent .site-list__item--active a {
+    border-bottom-color: white;
   }
 }

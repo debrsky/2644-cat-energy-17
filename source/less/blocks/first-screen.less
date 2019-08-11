@@ -7,6 +7,11 @@
   align-items: center;
 
   background-image: url("../img/index-background-mobile@1x.jpg");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
+
   background-repeat: no-repeat;
   background-position: 0 1px;
   background-size: contain;
@@ -16,6 +21,8 @@
 }
 
 .first-screen__title {
+  font: normal 36px/36px "Oswald", "Arial", sans-serif;
+
   padding: 0;
   margin: 0;
   text-align: center;
@@ -26,8 +33,11 @@
 }
 
 .first-screen__text {
+  font: normal 14px/14px "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+
   margin: 0;
-  margin-top: 23px;
+  margin-top: 26px;
   padding: 0;
   text-align: center;
 
@@ -39,24 +49,21 @@
 .first-screen__image {
   display: block;
   margin: 0;
-  margin-top: 24px;
+  margin-top: 28px;
   padding: 0;
 }
 
 .first-screen__link {
+  font: normal 14px/18px "Oswald", "Arial", sans-serif;
+
   align-self: stretch;
+
   margin: 0;
   margin-left: @margin-mobile;
   margin-right: @margin-mobile;
   margin-top: 3px; // по макету вплотную к картинке
   margin-bottom: @margin-mobile;
-  padding: 9px;
-  padding-bottom: 10px;
-
-  text-align: center;
-  text-decoration: none;
-  color: @color-text-inverse;
-  background-color: @color-accent;
+  padding: 11px;
 }
 
 /* ***************************************************************************** */
@@ -76,6 +83,9 @@
   }
 
   .first-screen__title {
+    font-size: 60px;
+    line-height: 60px;
+
     margin: 0;
 
     color: black;
@@ -84,8 +94,11 @@
   }
 
   .first-screen__text {
+    font-size: 20px;
+    line-height: 20px;
+
     margin: 0;
-    margin-top: 36px;
+    margin-top: 42px;
     color: black;
     width: 430px;
     text-align: left;
@@ -93,7 +106,7 @@
 
   .first-screen__image {
     position: absolute;
-    bottom: 0;
+    bottom: 2px;
     right: @margin-tablet;
 
     box-sizing: border-box;
@@ -103,18 +116,19 @@
   }
 
   .first-screen__link {
+    font-size: 20px;
+    line-height: 20px;
+
     box-sizing: border-box;
     width: 245px;
 
     text-align: left;
 
     margin: 0;
-    margin-top: 43px;
+    margin-top: 48px;
     margin-left: 1px;
 
-    padding: 10px;
-    padding-left: 25px;
-    padding-bottom: 12px;
+    padding: 16px 25px;
   }
 }
 
@@ -132,7 +146,7 @@
 
   .first-screen__title {
     margin: 0;
-    margin-top: 2px;
+    margin-top: 5px;
     padding: 0;
 
     color: black;
@@ -142,15 +156,15 @@
 
   .first-screen__text {
     margin: 0;
-    margin-top: 36px;
+    margin-top: 40px;
 
     color: black;
   }
 
   .first-screen__image {
     position: absolute;
-    top: -40px;
-    right: 260px;
+    top: -44px;
+    right: 258px;
 
     box-sizing: border-box;
     height: 499px;
@@ -158,9 +172,6 @@
 
   .first-screen__link {
     margin: 0;
-    margin-top: 48px;
-
-    box-sizing: border-box;
-    width: 245px;
+    margin-top: 53px;
   }
 }

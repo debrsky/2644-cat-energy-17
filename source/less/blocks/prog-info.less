@@ -1,22 +1,26 @@
 .prog-info {
   display: flex;
   position: relative;
-  min-height: 50px;
+  min-height: 55px;
   border: 1px solid #cdcdcd;
   border-radius: 5px;
   background-color: inherit;
+
+  padding-bottom: 5px;
 }
 
 .prog-info__data {
   position: absolute;
-  top: calc(100% - 0.5em + 2px);
+  top: calc(100% - 0.5em - 2px);
   left: 50%;
   transform: translateX(-50%);
-  background-color: inherit;
+  background-color: #f2f2f2;
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
+  padding-left: 3ch;
+  padding-right: 3ch;
 }
 
 .prog-info__value {
@@ -29,6 +33,7 @@
   text-transform: uppercase;
 }
 
+/* ************************************************************************* */
 @media (min-width: @width-tablet) {
   .prog-info {
     min-height: 75px;
@@ -48,9 +53,16 @@
     top: calc(100% - 0.5em - 1px);
     left: 50%;
     transform: translateX(-50%);
-    background-color: inherit;
+    background-color: white;
     font-family: "Arial", sans-serif;
     white-space: nowrap;
     padding: 0 1ch;
+  }
+}
+
+/* ************************************************************************* */
+@media (min-width: @width-desktop) {
+  .prog-info__data {
+    background-color: #f2f2f2;
   }
 }

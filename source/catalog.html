@@ -16,7 +16,7 @@
   <header class="page-header">
     <div class="container page-header__container">
       <div class="page-header__logo">
-        <a class="logo">
+        <a href="index.html" class="logo">
           <picture>
             <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -35,8 +35,8 @@
           <li class="site-list__item">
             <a href="index.html">Главная</a>
           </li>
-          <li class="site-list__item">
-            <a>Каталог продукции</a>
+          <li class="site-list__item site-list__item--active">
+            <a href="catalog.html">Каталог продукции</a>
           </li>
           <li class="site-list__item">
             <a href="form.html">Подбор программы</a>
@@ -49,7 +49,7 @@
 
   <main class="page-main">
     <section class="container catalog">
-      <h2 class="catalog__title section-title">
+      <h2 class="catalog__title">
         Каталог продукции
       </h2>
 
@@ -58,9 +58,9 @@
         <li class="catalog__item article">
           <a href="#" class="catalog__info-link">
             <picture>
-              <source media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png">
-              <img class="article__image" src="img/chicken-small-mobile@1x.jpg" alt="курица, упаковка малая оранжевая">
+              <source media="(min-width: 1300px)" srcset="img/chicken-small-desktop@1x.png 1x, img/chicken-small-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png 1x, img/chicken-small-tablet@2x.png 2x">
+              <img class="article__image" src="img/chicken-small-mobile@1x.jpg" srcset="img/chicken-small-mobile@2x.jpg 2x" alt="курица, упаковка малая оранжевая">
             </picture>
             <h3 class="article__header">Cat Energy<br> Pro 500 г</h3>
           </a>
@@ -80,15 +80,15 @@
             </tr>
           </table>
 
-          <a href="#" class="article__order-link">Заказать</a>
+          <a href="#" class="article__order-link btn">Заказать</a>
         </li>
 
         <li class="catalog__item article">
           <a href="#" class="catalog__info-link">
             <picture>
-              <source media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png">
-              <img src="img/chicken-big-mobile@1x.jpg" alt="курица, упаковка большая оранжевая" class="article__image">
+              <source media="(min-width: 1300px)" srcset="img/chicken-big-desktop@1x.png 1x, img/chicken-big-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png 1x, img/chicken-big-tablet@2x.png 2x">
+              <img src="img/chicken-big-mobile@1x.jpg" srcset="img/chicken-big-mobile@2x.jpg 2x" alt="курица, упаковка большая оранжевая" class="article__image">
             </picture>
             <h3 class="article__header">Cat Energy<br> Pro 1000 г</h3>
           </a>
@@ -108,15 +108,15 @@
             </tr>
           </table>
 
-          <a href="#" class="article__order-link">Заказать</a>
+          <a href="#" class="article__order-link btn">Заказать</a>
         </li>
 
         <li class="catalog__item article">
           <a href="#" class="catalog__info-link">
             <picture>
-              <source media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.png">
-              <source media="(min-width: 769px)" srcset="img/fish-small-tablet@1x.png">
-              <img src="img/fish-small-mobile@1x.jpg" alt="рыба, упаковка малая зеленая" class="article__image">
+              <source media="(min-width: 1300px)" srcset="img/fish-small-desktop@1x.png 1x, img/fish-small-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.png 1x, img/fish-small-tablet@2x.png 2x">
+              <img src="img/fish-small-mobile@1x.jpg" srcset="img/fish-small-mobile@2x.jpg 2x" alt="рыба, упаковка малая зеленая" class="article__image">
             </picture>
             <h3 class="article__header">Cat Energy<br> Pro 500 г</h3>
           </a>
@@ -136,15 +136,15 @@
             </tr>
           </table>
 
-          <a href="#" class="article__order-link">Заказать</a>
+          <a href="#" class="article__order-link btn">Заказать</a>
         </li>
 
         <li class="catalog__item article">
           <a href="#" class="catalog__info-link">
             <picture>
-              <source media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png">
-              <img src="img/fish-big-mobile@1x.jpg" alt="рыба, упаковка большая зеленая" class="article__image">
+              <source media="(min-width: 1300px)" srcset="img/fish-big-desktop@1x.png 1x, img/fish-big-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png 1x, img/fish-big-tablet@2x.png 2x">
+              <img src="img/fish-big-mobile@1x.jpg" srcset="img/fish-big-mobile@2x.jpg 2x" alt="рыба, упаковка большая зеленая" class="article__image">
             </picture>
             <h3 class="article__header">Cat Energy<br> Pro 1000 г</h3>
           </a>
@@ -164,15 +164,15 @@
             </tr>
           </table>
 
-          <a href="#" class="article__order-link">Заказать</a>
+          <a href="#" class="article__order-link btn">Заказать</a>
         </li>
 
         <li class="catalog__item article">
           <a href="#" class="catalog__info-link">
             <picture>
-              <source media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png">
-              <img src="img/buckwheat-small-mobile@1x.jpg" alt="гречка, упаковка малая синяя" class="article__image">
+              <source media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.png 1x, img/buckwheat-small-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png 1x, img/buckwheat-small-tablet@2x.png 2x">
+              <img src="img/buckwheat-small-mobile@1x.jpg" scrset="img/buckwheat-small-mobile@2x.jpg 2x" alt="гречка, упаковка малая синяя" class="article__image">
             </picture>
             <h3 class="article__header">Cat Energy<br> Slim 500 г</h3>
           </a>
@@ -192,15 +192,15 @@
             </tr>
           </table>
 
-          <a href="#" class="article__order-link">Заказать</a>
+          <a href="#" class="article__order-link btn">Заказать</a>
         </li>
 
         <li class="catalog__item article">
           <a href="#" class="catalog__info-link">
             <picture>
-              <source media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png">
-              <img src="img/buckwheat-big-mobile@1x.jpg" alt="гречка, упаковка большая синяя" class="article__image">
+              <source media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.png 1x, img/buckwheat-big-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png 1x, img/buckwheat-big-tablet@2x.png 2x">
+              <img src="img/buckwheat-big-mobile@1x.jpg" srcset="img/buckwheat-big-mobile@2x.jpg 2x" alt="гречка, упаковка большая синяя" class="article__image">
             </picture>
             <h3 class="article__header">Cat Energy<br> Slim 1000 г</h3>
           </a>
@@ -220,15 +220,15 @@
             </tr>
           </table>
 
-          <a href="#" class="article__order-link">Заказать</a>
+          <a href="#" class="article__order-link btn">Заказать</a>
         </li>
 
         <li class="catalog__item article">
           <a href="#" class="catalog__info-link">
             <picture>
-              <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png">
-              <img src="img/rice-small-mobile@1x.jpg" alt="рис, упаковка малая фиолетовая" class="article__image">
+              <source media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.png 1x, img/rice-small-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.png 1x, img/rice-small-tablet@2x.png 2x">
+              <img src="img/rice-small-mobile@1x.jpg" srcset="img/rice-small-mobile@2x.jpg 2x" alt="рис, упаковка малая фиолетовая" class="article__image">
             </picture>
             <h3 class="article__header">Cat Energy<br> Slim 500 г</h3>
           </a>
@@ -248,13 +248,13 @@
             </tr>
           </table>
 
-          <a href="#" class="article__order-link">Заказать</a>
+          <a href="#" class="article__order-link btn">Заказать</a>
         </li>
 
         <li class="catalog__item article-more">
           <h3 class="article-more__header">Показать еще 100500 товаров</h3>
           <p class="article-more__text">На самом деле вкусов гораздо больше!</p>
-          <a href="#" class="article-more__order-link">Показать все</a>
+          <a href="#" class="article-more__order-link btn btn--muted">Показать все</a>
         </li>
       </ul>
     </section>
@@ -268,28 +268,28 @@
           <h3 class="article-extra__header">Сахарозаменитель</h3>
           <div class="article-extra__text">1 упаковка (100 г)</div>
           <div class="article-extra__price">200 Р</div>
-          <a href="#" class="article-extra__link">Заказать</a>
+          <a href="#" class="article-extra__link btn">Заказать</a>
         </li>
 
         <li class="catalog-extra__item article-extra">
           <h3 class="article-extra__header">Питьевая вода</h3>
           <div class="article-extra__text">5 литров</div>
           <div class="article-extra__price">50 Р</div>
-          <a href="#" class="article-extra__link">Заказать</a>
+          <a href="#" class="article-extra__link btn">Заказать</a>
         </li>
 
         <li class="catalog-extra__item article-extra">
           <h3 class="article-extra__header">Молоко</h3>
           <div class="article-extra__text">1 литр</div>
           <div class="article-extra__price">100 Р</div>
-          <a href="#" class="article-extra__link">Заказать</a>
+          <a href="#" class="article-extra__link btn">Заказать</a>
         </li>
 
         <li class="catalog-extra__item article-extra">
           <h3 class="article-extra__header">Витамины</h3>
           <div class="article-extra__text">1 упаковка (30 г)</div>
           <div class="article-extra__price">300 Р</div>
-          <a href="#" class="article-extra__link">Заказать</a>
+          <a href="#" class="article-extra__link btn">Заказать</a>
         </li>
       </ul>
 
@@ -313,11 +313,11 @@
     </header>
 
     <div class="contacts__map">
-      <div class="map">
+      <div class="map" id="map">
         <picture>
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
-          <img src="img/bg-map-mobile@1x.png" alt="карта" class="map__image" width="320" height="400">
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+          <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" talt="карта" class="map__image">
         </picture>
       </div>
     </div>
@@ -328,7 +328,7 @@
 
     <div class="container page-footer__container">
       <div class="page-footer__logo">
-        <a class="logo-footer">
+        <a href="index.html" class="logo-footer">
           <img src="img/logo-footer.svg" width="128" alt="Cat Energy">
         </a>
       </div>
@@ -349,6 +349,8 @@
 
   </footer>
 
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=976bc73e-1a13-44f2-bf40-ac63cb4e201b" type="text/javascript"></script>
+  <script src="js/map.js" type="text/javascript"></script>
 </body>
 
 </html>
