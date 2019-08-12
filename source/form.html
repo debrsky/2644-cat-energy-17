@@ -9,10 +9,14 @@
   <link rel="stylesheet" href="css/style.css">
 
   <script>document.createElement("picture");</script>
-  <script src="js/picturefill.min.js" async></script>
+  <script src="js/picturefill.min.js" async=""></script>
 </head>
 
 <body>
+  <div style="display: none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
   <header class="page-header page-header--mobile-nav-hidden">
     <div class="container page-header__container">
       <div class="page-header__logo">
@@ -21,8 +25,6 @@
             <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
             <img src="img/logo-mobile.svg" alt="Cat energy">
-            <!-- размеры картинок logo-*.svg указаны в атрибутах width и height самих файлов;
-                           через атрибуты srcset и sizes размеры не работают по непонятной причине -->
           </picture>
         </a>
       </div>
@@ -60,14 +62,14 @@
             <div class="form__textbox-area">
               <label class="textbox">
                 <span class="textbox__label">Имя:*</span>
-                <input class="textbox__input" type="text" name="catname" value="БАРСИК" required>
+                <input class="textbox__input" type="text" name="catname" value="БАРСИК" required="">
               </label>
             </div>
 
             <div class="form__textbox-area">
               <label class="textbox">
                 <span class="textbox__label">Вес (кг):*&nbsp;</span>
-                <input class="textbox__input" type="text" name="catweight" value="7" required>
+                <input class="textbox__input" type="text" name="catweight" value="7" required="">
               </label>
             </div>
 
@@ -99,7 +101,7 @@
 
               <div class="form__radio-area">
                 <label class="radio">
-                  <input class="visually-hidden" type="radio" name="goal" value="needadvice" checked>
+                  <input class="visually-hidden" type="radio" name="goal" value="needadvice" checked="">
                   <span class="radio__indicator"></span>Не знаю (нужен ваш совет)
                 </label>
               </div>
@@ -119,8 +121,7 @@
             <div class="form__textbox-area">
               <label class="textbox">
                 <span class="textbox__label">e-mail:*</span>
-                <input class="textbox__input textbox__input--email" type="email" name="email"
-                  value="KUKLACHEV@GMAIL.COM" required>
+                <input class="textbox__input textbox__input--email" type="email" name="email" value="KUKLACHEV@GMAIL.COM" required="">
               </label>
             </div>
           </div>
@@ -129,8 +130,7 @@
             <div class="form__textbox-area">
               <label class="textbox">
                 <span class="textbox__label">Телефон:*</span>
-                <input class="textbox__input textbox__input--tel" type="tel" name="tel" value="8(960)900-60-90"
-                  required>
+                <input class="textbox__input textbox__input--tel" type="tel" name="tel" value="8(960)900-60-90" required="">
               </label>
             </div>
           </div>
@@ -146,8 +146,7 @@
             <div class="form__textarea-area">
               <label class="textarea">
                 <span class="textarea__label"></span>
-                <textarea class="textarea__self" name="about"
-                  placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
+                <textarea class="textarea__self" name="about" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
               </label>
             </div>
           </div>
@@ -163,7 +162,7 @@
           <div class="cell cell--m-2of2 cell--t-2of4 cell--d-1of4">
             <div class="form__checkbox-area">
               <label class="checkbox">
-                <input class="visually-hidden" type="checkbox" name="extra" value="sugarsubst" checked>
+                <input class="visually-hidden" type="checkbox" name="extra" value="sugarsubst" checked="">
                 <span class="checkbox__indicator"></span>Сахарозаменитель
               </label>
             </div>
@@ -233,11 +232,9 @@
     <div class="contacts__map">
       <div class="map" id="map">
         <picture>
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x"
-            type="image/webp">
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x" type="image/webp">
           <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x"
-            type="image/webp">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x" type="image/webp">
           <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
           <source media="" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x" type="image/webp">
           <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" talt="карта" class="map__image">
@@ -256,12 +253,9 @@
         </a>
       </div>
       <ul class="page-footer__social social">
-        <li class="social__item social__item--vk"><a href="https://vk.com"><span
-              class="visually-hidden">Вконтакте</span></a></li>
-        <li class="social__item social__item--insta"><a href="https://www.instagram.com"><span
-              class="visually-hidden">Инстаграмм</span></a></li>
-        <li class="social__item social__item--fb"><a href="https://www.facebook.com"><span
-              class="visually-hidden">Фэйсбук</span></a></li>
+        <li class="social__item social__item--vk"><a href="https://vk.com"><span class="visually-hidden">Вконтакте</span></a></li>
+        <li class="social__item social__item--insta"><a href="https://www.instagram.com"><span class="visually-hidden">Инстаграмм</span></a></li>
+        <li class="social__item social__item--fb"><a href="https://www.facebook.com"><span class="visually-hidden">Фэйсбук</span></a></li>
       </ul>
       <div class="page-footer__copyright">
         <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
@@ -272,8 +266,7 @@
 
   </footer>
 
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=976bc73e-1a13-44f2-bf40-ac63cb4e201b"
-    type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=976bc73e-1a13-44f2-bf40-ac63cb4e201b" type="text/javascript"></script>
   <script src="js/map.js" type="text/javascript"></script>
 </body>
 
