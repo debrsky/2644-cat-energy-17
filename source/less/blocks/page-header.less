@@ -31,8 +31,12 @@
   height: 50px;
 }
 
+.no-js .page-header__nav-toggle {
+  display: none;
+}
+
 @media (max-width: (@width-tablet - 1px)) {
-  .page-header--mobile-nav-hidden .page-header__main-nav {
+  :root:not(.no-js) .page-header--mobile-nav-hidden .page-header__main-nav {
     display: none;
   }
 }
