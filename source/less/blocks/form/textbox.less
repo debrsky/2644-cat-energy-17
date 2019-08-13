@@ -16,6 +16,7 @@
 
   font: normal 16px/18px "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
+  color: #222222;
 
   padding: 0;
   padding-right: 12px;
@@ -41,7 +42,7 @@
   border: 1px solid rgba(#cdcdcd, 0.5);
 
   &--icon {
-    padding-right: 15px + 20px;
+    padding-right: 15px + 25px;
   }
 
   &:hover {
@@ -59,7 +60,7 @@
   }
 }
 
-.textbox__input {
+.textbox__input { /* stylelint-disable-line no-duplicate-selectors*/
   &:hover + .textbox__icon {
     // empty
   }
@@ -120,6 +121,10 @@
 
     box-sizing: border-box;
     height: 52px;
+
+    &--icon {
+      padding-right: 15px + 30px;
+    }
   }
 
   .textbox__icon {
@@ -133,5 +138,4 @@
       top: 27px;
     }
   }
-
 }

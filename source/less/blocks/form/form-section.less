@@ -1,23 +1,8 @@
 .form-section {
-  margin: 0;
-  padding: 0;
-
-  &--contacts {
-    padding-top: 14px;
-  }
-
-  &--comment {
-    padding-top: 20px;
-  }
-
-  &--extra {
-    padding-top: 22px;
-  }
-
-  &--final {
-    padding-top: 28px;
-    padding-bottom: 13px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
 
   .debug();
 }
@@ -25,25 +10,6 @@
 /* ***************************************************************** */
 @media (min-width: @width-tablet) {
   .form-section {
-    margin: 0;
-    padding: 0;
-
-    &--contacts {
-      padding-top: 75px;
-    }
-
-    &--comment {
-      padding-top: 55px;
-    }
-
-    &--extra {
-      padding-top: 50px;
-    }
-
-    &--final {
-      padding-top: 15px;
-      padding-bottom: 70px;
-    }
 
     .debug();
   }
@@ -52,24 +18,6 @@
 /* ***************************************************************** */
 @media (min-width: @width-desktop) {
   .form-section {
-    margin: 0;
-    padding: 0;
-
-    &--contacts {
-      padding-top: 58px;
-    }
-
-    &--comment {
-      padding-top: 58px;
-    }
-
-    &--extra {
-      padding-top: 53px;
-    }
-
-    &--final {
-      padding-top: 42px;
-      padding-bottom: 85px;
-    }
+    // empty
   }
 }

@@ -14,6 +14,8 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var webp = require("gulp-webp");
 var imagemin = require("gulp-imagemin");
+var htmlmin = require('gulp-htmlmin');
+var uglify = require('gulp-uglify');
 
 var del = require("del");
 
@@ -23,7 +25,6 @@ gulp.task("webp", function () {
     .pipe(webp({quality: 80}))
     .pipe(gulp.dest("source/img"));
 })
-
 
 gulp.task("images", function () {
   return gulp.src("source/img-no-opt/**/*.{png,jpg}")
@@ -38,6 +39,16 @@ gulp.task("images", function () {
 gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(posthtml([include()]))
+    .pipe(htmlmin({ collapseWhitespace: false }))
+    .pipe(gulp.dest("build"));
+})
+
+gulp.task("js", function () {
+  return gulp.src("source/js/**/*.js", {base: "source"})
+    .pipe(sourcemap.init())
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build"));
 })
 
@@ -70,9 +81,8 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**/*.{jpg,webp,png}",
-    "source/js/**",
     "source/*.ico",
-    "source/preview/**/*.*",
+    "source/preview/**/*.*"
   ], {
     base: "source"
   })
@@ -99,7 +109,8 @@ gulp.task("build", gulp.series(
   "copyAndOptSvg",
   "css",
   "sprite",
-  "html"
+  "html",
+  "js"
 ));
 
 gulp.task("server", function () {

@@ -96,17 +96,29 @@
     content: "";
     display: inline-block;
     vertical-align: baseline;
-    width: 4ch;
     height: 1em;
-    margin-left: 1ch;
+    width: 40px;
+    margin-left: 8px;
 
-    // background-color: gold;
-    background-image: url("../img/icon-right-arrow-long.svg");
-    background-position: 3px 4px;
-    background-size: calc(4ch - 4px - 4px);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24.2 11'%3E%3Cpath fill='%233f4242' d='M17.6 0l6.6 5.5-6.6 5.5V6.6H0V4.4h17.6z'/%3E%3C/svg%3E");
+    background-position: 5px 4px;
+    background-size: 25px 12px;
     background-repeat: no-repeat;
+    .debug();
   }
 
+  &:hover,
+  &:focus,
+  &:active {
+    &::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 11'%3E%3Cpath fill='%233f4242' d='M25.4 0L32 5.5 25.4 11V6.6H0V4.4h25.4z'/%3E%3C/svg%3E");
+      background-size: 32px 12px;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
   .debug();
 }
 
@@ -176,6 +188,10 @@
     margin-top: 32px;
     margin-left: -1px;
     margin-bottom: 16px;
+
+    &::after {
+      margin-left: 18px;
+    }
   }
 }
 

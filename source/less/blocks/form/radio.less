@@ -7,6 +7,16 @@
 
   padding: 6px;
   padding-left: 45px;
+
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover .radio__indicator {
+    border-color: #bababa;
+  }
 }
 
 .radio__indicator {
@@ -21,8 +31,7 @@
   left: 0;
 
   border-radius: 50%;
-  border: 1px solid #cecece;
-
+  border: 1px solid #cdcdcd;
   background-color: white;
 
   &::after {
