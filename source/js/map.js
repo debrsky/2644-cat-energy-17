@@ -1,11 +1,8 @@
 var myMap;
 
-// Дождёмся загрузки API и готовности DOM.
 ymaps.ready(init);
 
 function init() {
-  document.getElementById("map").innerHTML = "";
-
   var viewportWidth = document.documentElement.clientWidth;
 
   var centerCoords = [59.938693, 30.323010];
@@ -18,7 +15,7 @@ function init() {
 
   // Создание экземпляра карты и его привязка к контейнеру с
   // заданным id ("map").
-  myMap = new ymaps.Map('map', {
+  myMap = new ymaps.Map('map-yandex', {
     // При инициализации карты обязательно нужно указать
     // её центр и коэффициент масштабирования.
     center: centerCoords,
@@ -37,8 +34,8 @@ function init() {
   }
 
   myPlacemark = new ymaps.Placemark(markCoords, {
-    hintContent: 'Собственный значок метки',
-    balloonContent: 'Это красивая метка'
+    hintContent: '',
+    balloonContent: 'ул. Большая Конюшенная, д. 19/8 Санкт-Петербург'
   },
     {
       // Опции.
@@ -52,7 +49,6 @@ function init() {
       // её "ножки" (точки привязки).
       iconImageOffset: [-62, -106]
     });
-
 
   myMap.geoObjects.add(myPlacemark)
 }

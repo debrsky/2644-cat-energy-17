@@ -1,9 +1,9 @@
 .textbox {
+  position: relative;
+
   padding: 0;
   padding-top: 7px;
   padding-bottom: 7px;
-  padding-left: @margin-mobile;
-  padding-right: @margin-mobile;
 
   display: flex;
   align-items: baseline;
@@ -40,6 +40,10 @@
   color: #444444;
   border: 1px solid rgba(#cdcdcd, 0.5);
 
+  &--icon {
+    padding-right: 15px + 20px;
+  }
+
   &:hover {
     border-color: #cdcdcd;
   }
@@ -54,6 +58,39 @@
     border: 2px solid currentColor;
   }
 }
+
+.textbox__input {
+  &:hover + .textbox__icon {
+    // empty
+  }
+
+  &:invalid + .textbox__icon {
+    fill: #ff8282;
+  }
+
+  &:active + .textbox__icon,
+  &:focus + .textbox__icon {
+    fill: @color-accent;
+  }
+}
+
+.textbox__icon {
+  position: absolute;
+
+  fill: #222222;
+
+
+  &--email {
+    right: 15px;
+    top: 21px;
+  }
+
+  &--phone {
+    right: 12px;
+    top: 19px;
+  }
+}
+
 
 /* *********************************************************************************************** */
 @media (min-width: @width-tablet) {
@@ -84,4 +121,17 @@
     box-sizing: border-box;
     height: 52px;
   }
+
+  .textbox__icon {
+    position: absolute;
+
+    &--email {
+      top: 30px;
+    }
+
+    &--phone {
+      top: 27px;
+    }
+  }
+
 }
