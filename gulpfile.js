@@ -39,7 +39,7 @@ gulp.task("images", function () {
 gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(posthtml([include()]))
-    .pipe(htmlmin({ collapseWhitespace: false }))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 })
 
