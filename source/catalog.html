@@ -359,8 +359,21 @@
       </ul>
 
       <article class="catalog-extra__gift gift">
+        <div class="gift__background">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/gift-photo-desktop@1x.webp 1x, img/gift-photo-desktop@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 1300px)" srcset="img/gift-photo-desktop@1x.jpg 1x, img/gift-photo-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/gift-photo-tablet@1x.webp 1x, img/gift-photo-tablet@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 768px)" srcset="img/gift-photo-tablet@1x.jpg 1x, img/gift-photo-tablet@2x.jpg 2x">
+            <source media="" srcset="img/gift-photo-mobile@1x.webp 1x, img/gift-photo-mobile@2x.webp 2x" type="image/webp">
+            <img class="gift__background-image" src="img/gift-photo-mobile@1x.jpg" srcset="img/gift-photo-mobile@2x.jpg 2x" alt="фон: кот выглядывает в окно переноски">
+          </picture>
+        </div>
         <h3 class="gift__title visually-hidden">Подарок</h3>
-        <img class="gift__icon" src="img/icon-gift.svg" alt="подарок в упаковке" width="56" height="60">
+        <svg class="gift__icon" width="56" height="60" fill="white">
+          <title>Подарок в упаковке</title>
+          <use xlink:href="#icon-gift"></use>
+        </svg>
         <p class="gift__text">
           Закажите все<br> и получите чехол для кота в подарок!
         </p>
@@ -404,16 +417,39 @@
         </a>
       </div>
       <ul class="page-footer__social social">
-        <li class="social__item social__item--vk"><a href="https://vk.com"><span
-              class="visually-hidden">Вконтакте</span></a></li>
-        <li class="social__item social__item--insta"><a href="https://www.instagram.com"><span
-              class="visually-hidden">Инстаграмм</span></a></li>
-        <li class="social__item social__item--fb"><a href="https://www.facebook.com"><span
-              class="visually-hidden">Фэйсбук</span></a></li>
+        <li class="social__item">
+          <a href="https://vk.com">
+            <svg class="social__icon social__icon--vk" width="22" height="12">
+              <use xlink:href="#icon-vk"></use>
+            </svg>
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="https://www.instagram.com">
+            <svg class="social__icon social__icon--insta" width="16" height="16">
+              <use xlink:href="#icon-insta"></use>
+            </svg>
+            <span class="visually-hidden">Инстаграмм</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="https://www.facebook.com">
+            <svg class="social__icon social__icon--fb" width="10" height="19">
+              <use xlink:href="#icon-fb"></use>
+            </svg>
+            <span class="visually-hidden">Фэйсбук</span>
+          </a>
+        </li>
       </ul>
       <div class="page-footer__copyright">
         <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
-          HTML Academy
+          <span class="copyright__title">HTML Academy</span>
+          <div class="copyright__icon-container">
+            <svg class="copyright__icon" width="40" height="40">
+              <use xlink:href="#icon-htmlacademy"></use>
+            </svg>
+          </div>
         </a>
       </div>
     </div>

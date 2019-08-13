@@ -4,12 +4,10 @@
   align-items: center;
   align-content: center;
 
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: normal;
+  font: normal 16px/16px "Arial", sans-serif;
+  letter-spacing: -0.2px;
 
-  color: rgb(68, 68, 68);
+  color: #444444;
   text-decoration: none;
 
   margin: 0;
@@ -21,17 +19,40 @@
   .debug();
 }
 
-.copyright__icon {
-  width: 40px;
+.copyright__icon-title {
+  color: inherit;
+}
+
+
+.copyright__icon-container {
+  position: relative;
+  overflow: hidden;
+
+  box-sizing: border-box;
+  width: 50px;
   height: 40px;
+
+  color: inherit;
+
+  .debug();
+}
+
+.copyright__icon {
+  position: absolute;
+  right: -6px;
+  top: 1px;
+
+  color: inherit;
+  fill: currentColor;
+
+
+  .debug(lime);
 }
 
 
 /* ******************************************************************** */
 @media (min-width: @width-tablet) {
-  .copyright {
-    // empty
-  }
+  // empty
 }
 
 /* ******************************************************************** */
