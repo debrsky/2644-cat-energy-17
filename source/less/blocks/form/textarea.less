@@ -10,6 +10,7 @@
 
 .textarea__label {
   flex-grow: 0;
+  color: #222222;
 }
 
 .textarea__self {
@@ -23,8 +24,24 @@
   padding: 12px 14px;
   padding-right: 13px;
 
-  border: 1px solid #e6e6e6;
+  color: #444444;
+  border: 1px solid rgba(#cdcdcd, 0.5);
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:invalid {
+    border: 2px solid #ff8282;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border: 2px solid currentColor;
+  }
 }
+
 
 /* ******************************************************************************** */
 @media (min-width: @width-tablet) {
