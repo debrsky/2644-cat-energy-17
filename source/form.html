@@ -121,7 +121,8 @@
             <div class="form__textbox-area">
               <label class="textbox">
                 <span class="textbox__label">e-mail:*</span>
-                <input class="textbox__input textbox__input--email" type="email" name="email" value="KUKLACHEV@GMAIL.COM" required="">
+                <input class="textbox__input textbox__input--email" type="email" name="email"
+                  value="KUKLACHEV@GMAIL.COM" required="">
               </label>
             </div>
           </div>
@@ -130,7 +131,8 @@
             <div class="form__textbox-area">
               <label class="textbox">
                 <span class="textbox__label">Телефон:*</span>
-                <input class="textbox__input textbox__input--tel" type="tel" name="tel" value="8(960)900-60-90" required="">
+                <input class="textbox__input textbox__input--tel" type="tel" name="tel" value="8(960)900-60-90"
+                  required="">
               </label>
             </div>
           </div>
@@ -146,7 +148,8 @@
             <div class="form__textarea-area">
               <label class="textarea">
                 <span class="textarea__label"></span>
-                <textarea class="textarea__self" name="about" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
+                <textarea class="textarea__self" name="about"
+                  placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
               </label>
             </div>
           </div>
@@ -229,17 +232,20 @@
       </address>
     </header>
 
-    <div class="contacts__map">
-      <div class="map" id="map">
+    <div class="contacts__map map">
+      <div class="map__background">
         <picture>
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x"
+            type="image/webp">
           <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x"
+            type="image/webp">
           <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
           <source media="" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x" type="image/webp">
-          <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" talt="карта" class="map__image">
+          <img class="map__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="карта">
         </picture>
       </div>
+      <div class="map__yandex" id="map-yandex"></div>
     </div>
 
   </article>
@@ -253,9 +259,12 @@
         </a>
       </div>
       <ul class="page-footer__social social">
-        <li class="social__item social__item--vk"><a href="https://vk.com"><span class="visually-hidden">Вконтакте</span></a></li>
-        <li class="social__item social__item--insta"><a href="https://www.instagram.com"><span class="visually-hidden">Инстаграмм</span></a></li>
-        <li class="social__item social__item--fb"><a href="https://www.facebook.com"><span class="visually-hidden">Фэйсбук</span></a></li>
+        <li class="social__item social__item--vk"><a href="https://vk.com"><span
+              class="visually-hidden">Вконтакте</span></a></li>
+        <li class="social__item social__item--insta"><a href="https://www.instagram.com"><span
+              class="visually-hidden">Инстаграмм</span></a></li>
+        <li class="social__item social__item--fb"><a href="https://www.facebook.com"><span
+              class="visually-hidden">Фэйсбук</span></a></li>
       </ul>
       <div class="page-footer__copyright">
         <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
@@ -266,7 +275,8 @@
 
   </footer>
 
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=976bc73e-1a13-44f2-bf40-ac63cb4e201b" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=976bc73e-1a13-44f2-bf40-ac63cb4e201b"
+    type="text/javascript"></script>
   <script src="js/map.js" type="text/javascript"></script>
 </body>
 
