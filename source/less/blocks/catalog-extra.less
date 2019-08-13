@@ -1,5 +1,5 @@
 .catalog-extra {
-  padding: @margin-mobile @margin-mobile 35px;
+  padding: 0 @margin-mobile 35px;
 
   display: flex;
   flex-direction: column;
@@ -12,15 +12,17 @@
   align-self: flex-start;
 
   margin: 0;
-  margin-left: -0.5px;
+  margin-left: -@margin-mobile;
   padding: 0;
-  padding-top: 7px;
+  padding-left: @margin-mobile;
+  padding-right: @margin-mobile;
 
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 24px;
   font-weight: normal;
   color: #111111;
+  background-color: white;
 
   .debug();
 }
@@ -53,7 +55,7 @@
 /* *********************************************************************** */
 @media (min-width: @width-tablet) {
   .catalog-extra {
-    padding: (@margin-tablet + 38px) @margin-tablet 75px;
+    padding: 0 @margin-tablet 75px;
   }
 
   .catalog-extra__header {
@@ -61,6 +63,7 @@
     line-height: 36px;
     padding: 0;
     padding-left: 37px;
+    padding-right: 37px;
     margin: 0;
   }
 
@@ -95,16 +98,13 @@
     justify-content: space-between;
     align-items: flex-start;
 
-    padding: (@margin-desktop + 30px) @margin-desktop 88px;
+    padding: 0 @margin-desktop 88px;
   }
 
   .catalog-extra__header {
-    padding: 0;
-    margin: 0;
+    margin-left: -@margin-desktop;
+    padding-left: @margin-desktop;
     margin-bottom: 82px;
-
-    box-sizing: border-box;
-    width: 100%;
   }
 
   .catalog-extra__list {

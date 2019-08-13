@@ -63,6 +63,8 @@
 }
 
 .form__legend {
+  align-self: flex-start;
+
   font: normal 24px/24px "Oswald", "Arial", sans-serif;
 
   margin: 0;
@@ -70,6 +72,8 @@
   padding-left: @margin-mobile;
   padding-right: @margin-mobile;
   padding-bottom: 28px;
+
+  background: white;
 }
 
 .form__radio-group {
@@ -115,7 +119,7 @@
 @media (min-width: @width-tablet) {
   .form {
     padding: 0;
-    padding-top: 53px;
+    padding-top: 50px;
   }
 
   .form__title {
@@ -165,7 +169,12 @@
     margin-left: @margin-tablet;
     padding: 0;
     padding-left: 40px - 1px;
+    padding-right: 40px - 1px;
     padding-bottom: 65px;
+  }
+
+  .form__legend br {
+    display: none;
   }
 
   .form__radio-group {
