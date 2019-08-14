@@ -10,16 +10,16 @@
 
   cursor: pointer;
 
-  &:focus-within .checkbox__indicator {
-    border: 2px solid currentColor;
-  }
-
   &:active {
     opacity: 0.3;
   }
 
   &:hover .checkbox__indicator {
     border-color: #bababa;
+  }
+
+  &:focus-within .checkbox__indicator {
+    border: 2px solid currentColor;
   }
 
   .debug();
@@ -65,7 +65,7 @@
 @media (min-width: @width-tablet) {
   .checkbox {
     box-sizing: border-box;
-    height: 72px;
+    // height: 72px;
 
     font-size: 20px;
     line-height: 20px;
@@ -74,6 +74,8 @@
     padding-left: 59px;
     padding-top: 3px;
     padding-bottom: 7px;
+
+    margin-bottom: 42px;
   }
 
   .checkbox__indicator {
