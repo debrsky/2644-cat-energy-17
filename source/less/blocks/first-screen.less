@@ -1,4 +1,6 @@
 .first-screen {
+  position: relative;
+
   padding: 0;
   padding-top: 27px;
   display: flex;
@@ -6,18 +8,19 @@
   justify-content: flex-start;
   align-items: center;
 
-  background-image: url("../img/index-background-mobile@1x.jpg");
-
-  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/index-background-mobile@2x.jpg");
-  }
-
-  background-repeat: no-repeat;
-  background-position: 0 1px;
-  background-size: contain;
-
-  // background-color: pink;
   .debug(lime);
+}
+
+.first-screen__background {
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  left: 0;
+
+  width: 320px;
+  height: 305px;
+
+  background-color: @color-accent;
 }
 
 .first-screen__title {
@@ -80,6 +83,10 @@
 
     box-sizing: border-box;
     min-height: 835px + @margin-tablet;
+  }
+
+  .first-screen__background {
+    display: none;
   }
 
   .first-screen__title {
