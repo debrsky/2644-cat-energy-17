@@ -119,7 +119,10 @@ gulp.task("server", function () {
     notify: false,
     open: true,
     cors: true,
-    ui: false
+    // ui: false
+    ui: {
+      port: 8080
+    }
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
