@@ -20,7 +20,7 @@
     <include src="build/img/sprite.svg"></include>
   </div>
 
-  <header class="page-header">
+  <header class="page-header page-header--mobile-nav-hidden">
     <div class="container page-header__container">
       <div class="page-header__logo">
         <a href="index.html" class="logo">
@@ -366,9 +366,10 @@
                 srcset="img/gift-photo-desktop@1x.webp 1x, img/gift-photo-desktop@2x.webp 2x" type="image/webp">
               <source media="(min-width: 1300px)"
                 srcset="img/gift-photo-desktop@1x.jpg 1x, img/gift-photo-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/gift-photo-tablet@1x.webp 1x, img/gift-photo-tablet@2x.webp 2x"
-                type="image/webp">
-              <source media="(min-width: 768px)" srcset="img/gift-photo-tablet@1x.jpg 1x, img/gift-photo-tablet@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/gift-photo-tablet@1x.webp 1x, img/gift-photo-tablet@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="img/gift-photo-tablet@1x.jpg 1x, img/gift-photo-tablet@2x.jpg 2x">
               <source srcset="img/gift-photo-mobile@1x.webp 1x, img/gift-photo-mobile@2x.webp 2x" type="image/webp">
               <img class="gift__background-image" src="img/gift-photo-mobile@1x.jpg"
                 srcset="img/gift-photo-mobile@2x.jpg 2x" alt="фон: кот выглядывает в окно переноски">
@@ -463,10 +464,10 @@
 
   </footer>
 
-  <!--
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=976bc73e-1a13-44f2-bf40-ac63cb4e201b" type="text/javascript"></script>
-  <script src="js/map.js" type="text/javascript"></script>
--->
+  <script src="js/script.min.js" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=976bc73e-1a13-44f2-bf40-ac63cb4e201b"
+    type="text/javascript"></script>
+  <script src="js/map.min.js" type="text/javascript"></script>
 </body>
 
 </html>

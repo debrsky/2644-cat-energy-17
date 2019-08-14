@@ -11,11 +11,18 @@
 
 .before-after__image-container {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
+
+  height: 240px;
 
   &--before {
     box-sizing: border-box;
     width: 100%;
+
+    & .before-after__image {
+      position: absolute;
+      left: 0;
+    }
 
     .debug(lime);
   }
@@ -48,6 +55,31 @@
   .debug();
 }
 
+.before-after--show-before {
+  & .before-after__image-container--before {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  & .before-after__image-container--after {
+    box-sizing: border-box;
+    width: 0;
+  }
+}
+
+.before-after--show-after {
+  & .before-after__image-container--before {
+    box-sizing: border-box;
+    width: 0;
+  }
+
+  & .before-after__image-container--after {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+
 /* *********************************************************************** */
 @media (min-width: @width-tablet) {
   .before-after {
@@ -56,8 +88,10 @@
   }
 
   .before-after__image-container {
+    height: 517px;
+
     &--before {
-      padding-left: @margin-tablet;
+      left: @margin-tablet;
       width: 50%;
     }
 
@@ -84,7 +118,7 @@
 
   .before-after__image-container {
     &--before {
-      padding: 0;
+      left: 0;
       width: 730px / 2;
     }
 
