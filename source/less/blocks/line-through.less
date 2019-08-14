@@ -2,7 +2,7 @@
   position: relative;
 
   &::before {
-    content:  "";
+    content: "";
     display: block;
     position: absolute;
 
@@ -15,12 +15,11 @@
 
     z-index: -10;
   }
-
-/* не работает в Firefox
-  @line-start: 15px;
-  @line-end: @line-start + 2px;
-  background-image: linear-gradient(to bottom, transparent, transparent @line-start, @color-accent @line-start, @color-accent @line-end, transparent @line-end, transparent);
-*/
+  /* не работает в Firefox
+    @line-start: 15px;
+    @line-end: @line-start + 2px;
+    background-image: linear-gradient(to bottom, transparent, transparent @line-start, @color-accent @line-start, @color-accent @line-end, transparent @line-end, transparent);
+  */
 }
 
 @media (min-width: @width-tablet) {
@@ -28,11 +27,10 @@
     &::before {
       top: 22px;
     }
-
-/* не работает в Firefox
-    @line-start: 22px;
-    @line-end: @line-start + 2px;
-    background-image: linear-gradient(to bottom, transparent, transparent @line-start, @color-accent @line-start, @color-accent @line-end, transparent @line-end, transparent);
-*/
+    /* не работает в Firefox
+      @line-start: 22px;
+      @line-end: @line-start + 2px;
+      background-image: linear-gradient(to bottom, transparent, transparent @line-start, @color-accent @line-start, @color-accent @line-end, transparent @line-end, transparent);
+    */
   }
 }
