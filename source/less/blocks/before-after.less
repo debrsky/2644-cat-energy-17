@@ -16,7 +16,6 @@
   height: 240px;
 
   &--before {
-    box-sizing: border-box;
     width: 100%;
 
     & .before-after__image {
@@ -28,7 +27,6 @@
   }
 
   &--after {
-    box-sizing: border-box;
     width: 0;
 
     & .before-after__image {
@@ -45,7 +43,6 @@
 }
 
 .before-after__control-panel {
-  box-sizing: border-box;
   width: 100%;
 
   margin: 0;
@@ -57,24 +54,20 @@
 
 .before-after--show-before {
   & .before-after__image-container--before {
-    box-sizing: border-box;
     width: 100%;
   }
 
   & .before-after__image-container--after {
-    box-sizing: border-box;
     width: 0;
   }
 }
 
 .before-after--show-after {
   & .before-after__image-container--before {
-    box-sizing: border-box;
     width: 0;
   }
 
   & .before-after__image-container--after {
-    box-sizing: border-box;
     width: 100%;
   }
 }
@@ -83,7 +76,6 @@
 /* *********************************************************************** */
 @media (min-width: @width-tablet) {
   .before-after {
-    box-sizing: border-box;
     width: 2 * @column-desktop + 6 * @margin-desktop; // desktop (!)
   }
 
