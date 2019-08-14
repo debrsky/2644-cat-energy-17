@@ -48,9 +48,7 @@
 
 @media (min-width: @width-tablet) {
   .gift {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    position: relative;
   }
 
   .gift__background-image {
@@ -59,18 +57,20 @@
   }
 
   .gift__icon {
+    display: block;
+    position: absolute;
+    padding: 0;
     margin: 0;
-    position: relative;
-    top: -5px;
-    left: -30px;
+
+    left: 91px;
+    top: 65px;
   }
 
   .gift__text {
-    position: relative;
-    top: 2px;
-    left: 6px;
-    margin: 0;
     text-align: left;
+    position: absolute;
+    right: 115px;
+    top: 72px;
   }
 }
 
@@ -79,6 +79,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
   }
 
   .gift__background-image {
@@ -87,20 +88,13 @@
   }
 
   .gift__icon {
-    margin: 0;
-
-    position: relative;
-    top: 0;
-    left: 0;
+    position: static;
+    margin-top: 63px;
+    margin-bottom: 63px;
   }
 
   .gift__text {
-    position: relative;
-    top: 0;
-    left: 0;
-
-    margin: 0;
-
+    position: static;
     text-align: center;
   }
 }

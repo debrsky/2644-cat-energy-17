@@ -96,11 +96,10 @@
 @media (min-width: @width-desktop) {
   .article-extra {
     flex-wrap: no-wrap;
-    align-items: baseline;
+    align-items: center;
     align-content: center;
-    justify-content: flex-end;
 
-    padding: 5px 0;
+    padding: 10px 0;
   }
 
   .article-extra__header {
@@ -136,6 +135,8 @@
 
     box-sizing: border-box;
     width: @column-desktop;
+
+    height: 5px; // ie
     min-height: 40px;
   }
 }
