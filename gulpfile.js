@@ -21,13 +21,13 @@ var del = require("del");
 
 
 gulp.task("webp", function () {
-  return gulp.src("source/img-no-opt/**/*.{png,jpg}")
+  return gulp.src("source/img-original/**/*.{png,jpg}")
     .pipe(webp({quality: 80}))
     .pipe(gulp.dest("source/img"));
 })
 
 gulp.task("images", function () {
-  return gulp.src("source/img-no-opt/**/*.{png,jpg}")
+  return gulp.src("source/img-original/**/*.{png,jpg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true})
