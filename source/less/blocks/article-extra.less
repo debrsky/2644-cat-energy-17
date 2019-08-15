@@ -80,7 +80,7 @@
   .article-extra__price {
     font-size: 16px;
     line-height: 20px;
-    box-sizing: border-box;
+
     width: 95px;
     padding: 0;
     padding-left: 1ch;
@@ -96,11 +96,10 @@
 @media (min-width: @width-desktop) {
   .article-extra {
     flex-wrap: no-wrap;
-    align-items: baseline;
+    align-items: center;
     align-content: center;
-    justify-content: flex-end;
 
-    padding: 5px 0;
+    padding: 10px 0;
   }
 
   .article-extra__header {
@@ -111,7 +110,6 @@
   }
 
   .article-extra__text {
-    box-sizing: border-box;
     width: @column-desktop;
 
     padding: 0;
@@ -120,7 +118,6 @@
   }
 
   .article-extra__price {
-    box-sizing: border-box;
     width: 2*@margin-desktop;
 
     margin: 0;
@@ -134,8 +131,9 @@
     margin: 0;
     padding: 10px 10px 0;
 
-    box-sizing: border-box;
     width: @column-desktop;
+
+    height: 5px; // ie
     min-height: 40px;
   }
 }

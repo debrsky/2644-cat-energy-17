@@ -1,13 +1,36 @@
 .line-through {
-  @line-start: 15px;
-  @line-end: @line-start + 2px;
-  background-image: linear-gradient(to bottom, transparent, transparent @line-start, @color-accent @line-start, @color-accent @line-end, transparent @line-end, transparent);
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 15px;
+
+    background-color: @color-accent;
+
+    z-index: -10;
+  }
+  /* не работает в Firefox
+    @line-start: 15px;
+    @line-end: @line-start + 2px;
+    background-image: linear-gradient(to bottom, transparent, transparent @line-start, @color-accent @line-start, @color-accent @line-end, transparent @line-end, transparent);
+  */
 }
 
 @media (min-width: @width-tablet) {
   .line-through {
-    @line-start: 22px;
-    @line-end: @line-start + 2px;
-    background-image: linear-gradient(to bottom, transparent, transparent @line-start, @color-accent @line-start, @color-accent @line-end, transparent @line-end, transparent);
+    &::before {
+      top: 22px;
+    }
+    /* не работает в Firefox
+      @line-start: 22px;
+      @line-end: @line-start + 2px;
+      background-image: linear-gradient(to bottom, transparent, transparent @line-start, @color-accent @line-start, @color-accent @line-end, transparent @line-end, transparent);
+    */
   }
 }

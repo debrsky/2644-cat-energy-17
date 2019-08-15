@@ -25,6 +25,7 @@
 }
 
 .page-header__nav-toggle {
+  display: block;
   position: absolute;
   top: 0;
   right: 0;
@@ -36,7 +37,7 @@
 }
 
 @media (max-width: (@width-tablet - 1px)) {
-  :root:not(.no-js) .page-header--mobile-nav-hidden .page-header__main-nav {
+  html:not(.no-js) .page-header--mobile-nav-hidden .page-header__main-nav {
     display: none;
   }
 }
@@ -83,7 +84,6 @@
       right: 0;
       top: 0;
 
-      box-sizing: border-box;
       height: 696px;
       width: 50%;
 

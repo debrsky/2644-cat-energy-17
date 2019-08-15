@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="0no-js preview preview--form">
+<html lang="ru" class="no-js preview preview--form">
 
 <head>
   <meta charset="UTF-8">
@@ -53,6 +53,7 @@
   </header>
 
   <main class="page-main">
+    <h1 class="visually-hidden">Cat energy. Форма подбора программы</h1>
     <form class="form" action="https://echo.htmlacademy.ru">
       <section class="form-section-container form-section-container--start">
         <div class="container form-section">
@@ -124,7 +125,7 @@
       <section class="form-section-container form-section-container--contacts line-through">
         <div class="container form-section">
           <h3 class="form__legend">
-            Контактные данные<br> (владельца кота)
+            <!-- htmlmin:ignore -->Контактные данные<br> (владельца кота)<!-- htmlmin:ignore -->
           </h3>
 
           <div class="box">
@@ -278,7 +279,7 @@
     <div class="container page-footer__container">
       <div class="page-footer__logo">
         <a href="index.html" class="logo-footer">
-          <img src="img/logo-footer.svg" width="128" alt="Cat Energy">
+          <img src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
         </a>
       </div>
       <ul class="page-footer__social social">
@@ -321,10 +322,9 @@
 
   </footer>
 
-  <!--
+  <script src="js/script.min.js" type="text/javascript"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=976bc73e-1a13-44f2-bf40-ac63cb4e201b" type="text/javascript"></script>
-  <script src="js/map.js" type="text/javascript"></script>
--->
+  <script src="js/map.min.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -11,17 +11,22 @@
 
 .before-after__image-container {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
+
+  height: 240px;
 
   &--before {
-    box-sizing: border-box;
     width: 100%;
+
+    & .before-after__image {
+      position: absolute;
+      left: 0;
+    }
 
     .debug(lime);
   }
 
   &--after {
-    box-sizing: border-box;
     width: 0;
 
     & .before-after__image {
@@ -38,7 +43,6 @@
 }
 
 .before-after__control-panel {
-  box-sizing: border-box;
   width: 100%;
 
   margin: 0;
@@ -48,16 +52,38 @@
   .debug();
 }
 
+.before-after--show-before {
+  & .before-after__image-container--before {
+    width: 100%;
+  }
+
+  & .before-after__image-container--after {
+    width: 0;
+  }
+}
+
+.before-after--show-after {
+  & .before-after__image-container--before {
+    width: 0;
+  }
+
+  & .before-after__image-container--after {
+    width: 100%;
+  }
+}
+
+
 /* *********************************************************************** */
 @media (min-width: @width-tablet) {
   .before-after {
-    box-sizing: border-box;
     width: 2 * @column-desktop + 6 * @margin-desktop; // desktop (!)
   }
 
   .before-after__image-container {
+    height: 517px;
+
     &--before {
-      padding-left: @margin-tablet;
+      left: @margin-tablet;
       width: 50%;
     }
 
@@ -84,7 +110,7 @@
 
   .before-after__image-container {
     &--before {
-      padding: 0;
+      left: 0;
       width: 730px / 2;
     }
 

@@ -1,5 +1,8 @@
 .prog-info {
   display: flex;
+  justify-content: center;
+  align-items: center;
+
   position: relative;
   min-height: 55px;
   border: 1px solid #cdcdcd;
@@ -25,21 +28,25 @@
 
 .prog-info__value {
   font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
   font-size: 24px;
   line-height: 24px;
   font-weight: normal;
 
-  margin: auto;
-  text-transform: uppercase;
+  margin: 0;
+
+  .debug();
 }
 
 /* ************************************************************************* */
 @media (min-width: @width-tablet) {
   .prog-info {
+    height: 5px; // ie
     min-height: 75px;
   }
 
   .prog-info__value {
+    display: block;
     font-size: 30px;
     line-height: 37px;
     padding: 0;
@@ -49,7 +56,6 @@
   .prog-info__data {
     font-size: 14px;
     line-height: 14px;
-    width: auto;
     top: calc(100% - 0.5em - 1px);
     left: 50%;
     transform: translateX(-50%);
