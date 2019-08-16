@@ -42,24 +42,22 @@
 /* ******************************************************************** */
 @media (min-width: @width-desktop) {
   .categories {
-    padding: @margin-desktop;
-    padding-top: 2 * @margin-desktop;
+    padding: @margin-desktop 0;
   }
 
   .categories__list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: stretch;
   }
 
   .categories__item {
     width: (@column-desktop + @margin-desktop) * 2;
-    margin: 0;
-
+    margin: @margin-desktop @margin-desktop 0;
     &:not(:first-child) {
-      margin-top: 0;
+      margin-top: @margin-desktop;
     }
   }
 }
