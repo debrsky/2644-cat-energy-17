@@ -13,13 +13,16 @@
   margin: 0;
   padding: 0;
 
-  &:hover {
-    color: @color-accent;
+  &:active {
+    opacity: 0.3;
   }
 
-  &:active {
-    color: @color-accent;
-    opacity: 0.3;
+  &:hover .copyright__icon {
+    fill: @color-accent;
+  }
+
+  &:active .copyright__icon {
+    fill: @color-accent;
   }
 
   .debug();
@@ -46,10 +49,6 @@
   position: absolute;
   right: -6px;
   top: 1px;
-
-  color: inherit;
-  fill: currentColor;
-
 
   .debug(lime);
 }
