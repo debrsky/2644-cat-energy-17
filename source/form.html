@@ -250,80 +250,11 @@
     </form>
   </main>
 
-  <article class="contacts">
-
-    <header class="container contacts__header">
-      <h2 class="contacts__title">Приглашаем <br>к сотрудничеству дилеров!</h2>
-      <address class="contacts__address">
-        ул. Большая Конюшенная, д.&nbsp;19/8<br>&ensp;<br>Санкт-Петербург
-      </address>
-    </header>
-
-    <div class="contacts__map map">
-      <div class="map__background">
-        <picture>
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x"
-            type="image/webp">
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x"
-            type="image/webp">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-          <source srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x" type="image/webp">
-          <img class="map__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="карта">
-        </picture>
-      </div>
-      <div class="map__yandex" id="map-yandex"></div>
-    </div>
-
+  <article class="contacts contacts--index">
+    <include src="source/partials/contacts.html"></include>
   </article>
-  <footer class="page-footer">
 
-    <div class="container page-footer__container">
-      <div class="page-footer__logo">
-        <a href="index.html" class="logo-footer">
-          <img src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
-        </a>
-      </div>
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a href="https://vk.com">
-            <svg class="social__icon social__icon--vk" width="22" height="12">
-              <use xlink:href="#icon-vk"></use>
-            </svg>
-            <span class="visually-hidden">Вконтакте</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="https://www.instagram.com">
-            <svg class="social__icon social__icon--insta" width="16" height="16">
-              <use xlink:href="#icon-insta"></use>
-            </svg>
-            <span class="visually-hidden">Инстаграмм</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="https://www.facebook.com">
-            <svg class="social__icon social__icon--fb" width="10" height="19">
-              <use xlink:href="#icon-fb"></use>
-            </svg>
-            <span class="visually-hidden">Фэйсбук</span>
-          </a>
-        </li>
-      </ul>
-      <div class="page-footer__copyright">
-        <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="copyright__title">HTML Academy</span>
-          <div class="copyright__icon-container">
-            <svg class="copyright__icon" width="40" height="40">
-              <use xlink:href="#icon-htmlacademy"></use>
-            </svg>
-          </div>
-        </a>
-      </div>
-    </div>
-
-  </footer>
-
+  <include src="source/partials/footer.html"></include>
   <include src="source/partials/scripts.html"></include>
 </body>
 
