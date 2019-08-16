@@ -1,5 +1,3 @@
-console.log('заработало!!');
-
 var root = document.documentElement;
 root.classList.remove('no-js');
 
