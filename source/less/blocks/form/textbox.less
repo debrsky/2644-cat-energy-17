@@ -22,6 +22,11 @@
   padding-right: 12px;
 }
 
+// для IE, чтобы выключить подсветку красным invalid полей
+input.textbox__input {
+  outline: none;
+}
+
 .textbox__input {
   display: block;
 
@@ -75,11 +80,6 @@
     border: 2px solid currentColor;
   }
 
-}
-
-/* Internet Explorer 11+ */
-_:-ms-fullscreen, :root .textbox__input {
-  // empty
 }
 
 .textbox__input { /* stylelint-disable-line no-duplicate-selectors */
