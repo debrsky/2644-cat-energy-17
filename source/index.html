@@ -56,12 +56,6 @@
     <h1 class="visually-hidden">Cat energy. Главная страница</h1>
 
     <section class="container first-screen">
-      <div class="first-screen__background">
-        <picture>
-          <source srcset="img/index-background-mobile@1x.webp 1x, img/index-background-mobile@2x.webp 2x" type="image/webp">
-          <img src="img/index-background-mobile@1x.jpg" srcset="img/index-background-mobile@2x.jpg 2x" alt="Зеленая фоновая картинка с портретом кота анфас">
-        </picture>
-      </div>
       <h2 class="first-screen__title">Функциональное питание для котов</h2>
       <p class="first-screen__text">Занялся собой? Займись котом!</p>
       <picture>
@@ -153,8 +147,8 @@
               <img src="img/advantage-clock@1x.png" srcset="img/advantage-clock@2x.png 2x" alt="Настольные часы">
             </picture>
           </div>
-          <p class="advantagies__desc">Уже через месяц наслаждайтесь изменениями к лучшему вашего
-            питомца.</p>
+          <p class="advantagies__desc">Уже через месяц наслаждайтесь изменениями к лучшему<span class="new-line-t new-line-d"></span> вашего
+            питомца!</p>
         </li>
       </ul>
     </section>
@@ -230,83 +224,11 @@
   </main>
 
   <article class="contacts contacts--index">
-
-    <header class="container contacts__header">
-      <h2 class="contacts__title">Приглашаем <br>к сотрудничеству дилеров!</h2>
-      <address class="contacts__address">
-        ул. Большая Конюшенная, д.&nbsp;19/8<br>&ensp;<br>Санкт-Петербург
-      </address>
-    </header>
-
-    <div class="contacts__map map">
-      <div class="map__background">
-        <picture>
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x"
-            type="image/webp">
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x"
-            type="image/webp">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-          <source srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x" type="image/webp">
-          <img class="map__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="карта">
-        </picture>
-      </div>
-      <div class="map__yandex" id="map-yandex"></div>
-    </div>
-
+    <include src="source/partials/contacts.html"></include>
   </article>
 
-  <footer class="page-footer">
-
-    <div class="container page-footer__container">
-      <div class="page-footer__logo">
-        <a href="index.html" class="logo-footer">
-          <img src="img/logo-footer.svg" width="128" height="24" alt="Cat Energy">
-        </a>
-      </div>
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a href="https://vk.com">
-            <svg class="social__icon social__icon--vk" width="22" height="12">
-              <use xlink:href="#icon-vk"></use>
-            </svg>
-            <span class="visually-hidden">Вконтакте</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="https://www.instagram.com">
-            <svg class="social__icon social__icon--insta" width="16" height="16">
-              <use xlink:href="#icon-insta"></use>
-            </svg>
-            <span class="visually-hidden">Инстаграмм</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a href="https://www.facebook.com">
-            <svg class="social__icon social__icon--fb" width="10" height="19">
-              <use xlink:href="#icon-fb"></use>
-            </svg>
-            <span class="visually-hidden">Фэйсбук</span>
-          </a>
-        </li>
-      </ul>
-      <div class="page-footer__copyright">
-        <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="copyright__title">HTML Academy</span>
-          <div class="copyright__icon-container">
-            <svg class="copyright__icon" width="40" height="40">
-              <use xlink:href="#icon-htmlacademy"></use>
-            </svg>
-          </div>
-        </a>
-      </div>
-    </div>
-
-  </footer>
-
-  <script src="js/script.min.js" type="text/javascript"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=976bc73e-1a13-44f2-bf40-ac63cb4e201b" type="text/javascript"></script>
-  <script src="js/map.min.js" type="text/javascript"></script>
+  <include src="source/partials/footer.html"></include>
+  <include src="source/partials/scripts.html"></include>
 </body>
 
 </html>
