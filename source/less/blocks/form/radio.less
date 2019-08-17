@@ -54,6 +54,15 @@
   content: none;
 }
 
+.radio input:focus + .radio__indicator {
+  border: 2px solid #444444;
+
+  &::after {
+    top: 7px;
+    left: 7px;
+  }
+}
+
 /* ************************************************************************ */
 @media (min-width: @width-tablet) {
   .radio {
@@ -76,6 +85,15 @@
 
       top: 10px;
       left: 10px;
+    }
+  }
+
+  .radio input:focus + .radio__indicator {
+    border: 2px solid #444444;
+
+    &::after {
+      top: 9px;
+      left: 9px;
     }
   }
 }
