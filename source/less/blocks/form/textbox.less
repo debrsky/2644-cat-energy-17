@@ -48,30 +48,39 @@
     border-color: #cdcdcd;
   }
 
-  &:invalid {
-    border: 2px solid #ff8282;
-  }
-
-  &:active,
   &:focus {
     outline: none;
     border: 2px solid currentColor;
   }
-}
 
-.textbox__input { /* stylelint-disable-line no-duplicate-selectors*/
+  &:invalid:not(:placeholder-shown) {
+    outline: none;
+    border: 2px solid #ff8282;
+  }
+
+  &:focus:not(:placeholder-shown) {
+    outline: none;
+    border: 2px solid currentColor;
+  }
+
+
+  .textbox__input { /* stylelint-disable-line no-duplicate-selectors */
   &:hover + .textbox__icon {
     // empty
   }
 
-  &:invalid + .textbox__icon {
-    fill: #ff8282;
-  }
-
-  &:active + .textbox__icon,
   &:focus + .textbox__icon {
     fill: @color-accent;
   }
+
+  &:invalid:not(:placeholder-shown) + .textbox__icon {
+    fill: #ff8282;
+  }
+
+  &:focus:not(:placeholder-shown) + .textbox__icon {
+    fill: @color-accent;
+  }
+
 }
 
 .textbox__icon {
