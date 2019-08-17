@@ -53,6 +53,18 @@
     border: 2px solid currentColor;
   }
 
+  // autoprefixer тут не работает по непонятной причине
+  &:invalid:not(:-ms-input-placeholder) {
+    outline: none;
+    border: 2px solid #ff8282;
+  }
+
+  // autoprefixer тут не работает по непонятной причине
+  &:focus:not(:-ms-input-placeholder) {
+    outline: none;
+    border: 2px solid currentColor;
+  }
+
   &:invalid:not(:placeholder-shown) {
     outline: none;
     border: 2px solid #ff8282;
@@ -63,13 +75,29 @@
     border: 2px solid currentColor;
   }
 
+}
 
-  .textbox__input { /* stylelint-disable-line no-duplicate-selectors */
+/* Internet Explorer 11+ */
+_:-ms-fullscreen, :root .textbox__input {
+  // empty
+}
+
+.textbox__input { /* stylelint-disable-line no-duplicate-selectors */
   &:hover + .textbox__icon {
     // empty
   }
 
   &:focus + .textbox__icon {
+    fill: @color-accent;
+  }
+
+  // autoprefixer тут не работает по непонятной причине
+  &:invalid:not(:-ms-input-placeholder) + .textbox__icon {
+    fill: #ff8282;
+  }
+
+  // autoprefixer тут не работает по непонятной причине
+  &:focus:not(:-ms-input-placeholder) + .textbox__icon {
     fill: @color-accent;
   }
 
