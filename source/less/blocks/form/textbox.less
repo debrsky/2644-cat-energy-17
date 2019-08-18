@@ -1,3 +1,5 @@
+// TODO https://medium.com/wdstack/inline-validation-in-forms-designing-the-experience-123fb34088ce
+
 .textbox {
   position: relative;
 
@@ -21,6 +23,15 @@
   padding: 0;
   padding-right: 12px;
 }
+
+
+// для IE, чтобы выключить подсветку красным invalid полей после сабмита
+/* stylelint-disable */
+_:-ms-fullscreen, :root input.textbox__input {
+  outline: none;
+}
+/* stylelint-enable */
+
 
 .textbox__input {
   display: block;
@@ -48,29 +59,75 @@
     border-color: #cdcdcd;
   }
 
-  &:invalid {
-    border: 2px solid #ff8282;
-  }
-
-  &:active,
   &:focus {
     outline: none;
     border: 2px solid currentColor;
   }
+
+  // autoprefixer тут не работает по непонятной причине
+  &:invalid:not(:-ms-input-placeholder) {
+    outline: none;
+    border: 2px solid #ff8282;
+  }
+
+  // autoprefixer тут не работает по непонятной причине
+  &:focus:not(:-ms-input-placeholder) {
+    outline: none;
+    border: 2px solid currentColor;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    outline: none;
+    border: 2px solid #ff8282;
+  }
+
+  &:focus:not(:placeholder-shown) {
+    outline: none;
+    border: 2px solid currentColor;
+  }
+
+  // Edge, поскольку :placeholder-shown не работает ни в каком виде
+  @supports (-ms-ime-align:auto) {
+    &:invalid:focus {
+      outline: none;
+      border: 2px solid #ff8282;
+    }
+  }
 }
 
-.textbox__input { /* stylelint-disable-line no-duplicate-selectors*/
+// стилизация иконки
+.textbox__input { /* stylelint-disable-line no-duplicate-selectors */
   &:hover + .textbox__icon {
     // empty
   }
 
-  &:invalid + .textbox__icon {
+  &:focus + .textbox__icon {
+    fill: @color-accent;
+  }
+
+  // autoprefixer тут не работает по непонятной причине
+  &:invalid:not(:-ms-input-placeholder) + .textbox__icon {
     fill: #ff8282;
   }
 
-  &:active + .textbox__icon,
-  &:focus + .textbox__icon {
+  // autoprefixer тут не работает по непонятной причине
+  &:focus:not(:-ms-input-placeholder) + .textbox__icon {
     fill: @color-accent;
+  }
+
+  &:invalid:not(:placeholder-shown) + .textbox__icon {
+    fill: #ff8282;
+  }
+
+  &:focus:not(:placeholder-shown) + .textbox__icon {
+    fill: @color-accent;
+  }
+
+  // Edge, поскольку :placeholder-shown не работает ни в каком виде
+  @supports (-ms-ime-align:auto) {
+    &:invalid:focus + .textbox__icon {
+      fill: #ff8282;
+    }
   }
 }
 
