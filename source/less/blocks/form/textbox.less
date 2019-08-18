@@ -24,10 +24,13 @@
   padding-right: 12px;
 }
 
+
 // для IE, чтобы выключить подсветку красным invalid полей после сабмита
+/* stylelint-disable */
 _:-ms-fullscreen, :root input.textbox__input {
   outline: none;
 }
+/* stylelint-enable */
 
 
 .textbox__input {
@@ -126,7 +129,6 @@ _:-ms-fullscreen, :root input.textbox__input {
       fill: #ff8282;
     }
   }
-
 }
 
 .textbox__icon {
