@@ -89,7 +89,7 @@ gulp.task("copy", function () {
   .pipe(gulp.dest("build"));
 });
 
-gulp.task("copyAndOptSvg", function () {
+gulp.task("copy-and-opt-svg", function () {
   return gulp.src([
     "source/img/**/*.svg",
   ], {
@@ -106,7 +106,7 @@ gulp.task("clean", function () {
 gulp.task("build", gulp.series(
   "clean",
   "copy",
-  "copyAndOptSvg",
+  "copy-and-opt-svg",
   "css",
   "sprite",
   "html",
