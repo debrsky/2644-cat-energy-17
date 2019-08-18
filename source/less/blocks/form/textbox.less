@@ -22,10 +22,11 @@
   padding-right: 12px;
 }
 
-// для IE, чтобы выключить подсветку красным invalid полей
-input.textbox__input {
+// для IE, чтобы выключить подсветку красным invalid полей после сабмита
+_:-ms-fullscreen, :root input.textbox__input {
   outline: none;
 }
+
 
 .textbox__input {
   display: block;
@@ -80,8 +81,16 @@ input.textbox__input {
     border: 2px solid currentColor;
   }
 
+  // Edge, поскольку :placeholder-shown не работает ни в каком виде
+  @supports (-ms-ime-align:auto) {
+    &:invalid:focus {
+      outline: none;
+      border: 2px solid #ff8282;
+    }
+  }
 }
 
+// стилизация иконки
 .textbox__input { /* stylelint-disable-line no-duplicate-selectors */
   &:hover + .textbox__icon {
     // empty
@@ -107,6 +116,13 @@ input.textbox__input {
 
   &:focus:not(:placeholder-shown) + .textbox__icon {
     fill: @color-accent;
+  }
+
+  // Edge, поскольку :placeholder-shown не работает ни в каком виде
+  @supports (-ms-ime-align:auto) {
+    &:invalid:focus + .textbox__icon {
+      fill: #ff8282;
+    }
   }
 
 }
